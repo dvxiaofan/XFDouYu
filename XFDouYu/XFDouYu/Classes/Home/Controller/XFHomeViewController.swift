@@ -8,8 +8,20 @@
 
 import UIKit
 
-class XFHomeViewController: UIViewController {
 
+fileprivate let kTitleViewH : CGFloat = 40
+
+class XFHomeViewController: UIViewController {
+    
+    // MARK:- 懒加载
+    fileprivate lazy var pageTitleView: XFPageTitleView = {
+        let titleFrame = CGRect(x: 0, y: 64, width: kScreenW, height: kTitleViewH)
+        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let titleView = XFPageTitleView(frame: titleFrame, titles: titles)
+        return titleView
+    }()
+
+    // MARK:- 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,8 +33,14 @@ class XFHomeViewController: UIViewController {
 // MARK:- 设置 UI
 extension XFHomeViewController {
     fileprivate func setUpUI() {
-        // 设置导航栏
+        // 0. 不允许系统调整 scrollview 内边距
+        automaticallyAdjustsScrollViewInsets = false
+        
+        // 1. 设置导航栏
         setUpNavBar()
+        
+        // 2. 添加 titleview
+        view.addSubview(pageTitleView)
     }
     
     fileprivate func setUpNavBar() {

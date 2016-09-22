@@ -17,6 +17,9 @@
 		BD0F88C31D92D89C002137C4 /* XFProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0F88C21D92D89C002137C4 /* XFProfile.storyboard */; };
 		BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F88C61D92DF49002137C4 /* XFHomeViewController.swift */; };
 		BD88399D1D93CA1600494760 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */; };
+		BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */; };
+		BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */; };
+		BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE2D1D93E2D3006CC5C7 /* XFCommon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		BD0F88C21D92D89C002137C4 /* XFProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XFProfile.storyboard; sourceTree = "<group>"; };
 		BD0F88C61D92DF49002137C4 /* XFHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFHomeViewController.swift; sourceTree = "<group>"; };
 		BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFPageTitleView.swift; sourceTree = "<group>"; };
+		BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFDefineFile.swift; sourceTree = "<group>"; };
+		BDE1AE2D1D93E2D3006CC5C7 /* XFCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCommon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 		BD0F88B71D92D580002137C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				BD88399B1D93C9F100494760 /* Extension */,
+				BDE1AE2D1D93E2D3006CC5C7 /* XFCommon.swift */,
+				BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -280,6 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */,
+				BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */,
+				BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */,
 				BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */,
 				BD0F88961D92CEEC002137C4 /* AppDelegate.swift in Sources */,
 				BD88399D1D93CA1600494760 /* UIBarButtonItem-Extension.swift in Sources */,
@@ -402,6 +414,7 @@
 				INFOPLIST_FILE = XFDouYu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devxiaofan.XFDouYu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
