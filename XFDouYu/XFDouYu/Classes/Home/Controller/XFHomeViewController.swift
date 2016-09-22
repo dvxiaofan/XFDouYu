@@ -12,24 +12,45 @@ class XFHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 设置 UI 界面
+        setUpUI()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK:- 设置 UI
+extension XFHomeViewController {
+    fileprivate func setUpUI() {
+        // 设置导航栏
+        setUpNavBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    fileprivate func setUpNavBar() {
+        // 左边 item
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
+        
+        // 右边 item
+        let size = CGSize(width: 40, height: 40)
+        
+        let searchItem = UIBarButtonItem(imageName: "btn_search", highlightImgName: "btn_search_clicked", size: size)
+        let ercodeItem = UIBarButtonItem(imageName: "Image_scan", highlightImgName: "Image_scan_click", size: size)
+        let historyItem = UIBarButtonItem(imageName: "image_my_history", highlightImgName: "Image_my_history_click", size: size)
+        
+        navigationItem.rightBarButtonItems = [searchItem, ercodeItem, historyItem]
     }
-    */
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
