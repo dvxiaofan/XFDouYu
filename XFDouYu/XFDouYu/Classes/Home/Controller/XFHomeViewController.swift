@@ -20,6 +20,22 @@ class XFHomeViewController: UIViewController {
         let titleView = XFPageTitleView(frame: titleFrame, titles: titles)
         return titleView
     }()
+    
+    fileprivate lazy var pageContentView: XFPageContentView = {
+        // 1. 确定内容 frame
+        let contentH = kScreenH - kStatusBarH - kNavBarH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
+        // 2. 确定所有控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let contentView = XFPageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
+        return contentView
+    }()
 
     // MARK:- 系统回调
     override func viewDidLoad() {
@@ -41,6 +57,9 @@ extension XFHomeViewController {
         
         // 2. 添加 titleview
         view.addSubview(pageTitleView)
+        
+        // 3. 添加 contentview
+        view.addSubview(pageContentView)
     }
     
     fileprivate func setUpNavBar() {

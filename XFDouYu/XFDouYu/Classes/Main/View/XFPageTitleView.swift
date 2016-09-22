@@ -8,12 +8,23 @@
 
 import UIKit
 
+
+// MARK:- 定义常量
 fileprivate let kScroLineH: CGFloat = 2
+fileprivate let kNormalColor: UIColor = UIColor(r: 85, g: 85, b: 85)
+fileprivate let kSelectColor: UIColor = UIColor(r: 255, g: 128, b: 0)
+
+// MARK:- 定义协议
+protocol XFPageTitleViewDelegate: class {
+    func pageTitleView(pageTitleView: XFPageTitleView, didSelectedIndex index: Int)
+}
 
 class XFPageTitleView: UIView {
     
     // MARK:- 定义属性
     fileprivate var titles: [String]
+    fileprivate var currentIndex: Int = 0
+    weak var delegate: XFPageTitleViewDelegate?
     
     // MARK:- 懒加载属性
     fileprivate lazy var titleLabels: [UILabel] = [UILabel]()
@@ -75,7 +86,7 @@ extension XFPageTitleView {
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor.darkGray
+            label.textColor = kNormalColor
             label.textAlignment = .center
             
             let labelX: CGFloat = labelW * CGFloat(index)
@@ -83,6 +94,11 @@ extension XFPageTitleView {
             
             scrollView.addSubview(label)
             titleLabels.append(label)
+            
+            // 添加手势识别
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick(tapGes:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     
@@ -98,11 +114,49 @@ extension XFPageTitleView {
         // 2. 添加 scrollLine
         guard let firstLabel = titleLabels.first else { return }
         
-        firstLabel.textColor = UIColor.orange
+        firstLabel.textColor = kSelectColor
         
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScroLineH, width: firstLabel.frame.width, height: kScroLineH)
     }
+}
+
+// MARK:- 事件监听
+extension XFPageTitleView {
+    /// titleLabel 点击
+    @objc fileprivate func titleLabelClick(tapGes: UITapGestureRecognizer) {
+        // 1. 获得点击的下标
+        guard let view = tapGes.view else {
+            return
+        }
+        let index = view.tag
+        
+        // 2. 滚动到对应位置
+        scrollToIndex(index: index)
+        
+        // 3. 通知代理
+        delegate?.pageTitleView(pageTitleView: self, didSelectedIndex: index)
+    }
+    
+    fileprivate func scrollToIndex(index: Int) {
+        // 1. 获取之前的 label 和最新的 label
+        let newLabel = titleLabels[index]
+        let oldLabel = titleLabels[currentIndex]
+        
+        // 2. 设置 label 颜色
+        newLabel.textColor = kSelectColor
+        oldLabel.textColor = kNormalColor
+        
+        // 3. scrollLIne 滚动到对应位置
+        let scrollLineEndX = scrollLine.frame.width * CGFloat(index)
+        UIView.animate(withDuration: 0.15) { 
+            self.scrollLine.frame.origin.x = scrollLineEndX
+        }
+        
+        // 4. 记录当前 index
+        currentIndex = index
+    }
+    
 }
 
 
