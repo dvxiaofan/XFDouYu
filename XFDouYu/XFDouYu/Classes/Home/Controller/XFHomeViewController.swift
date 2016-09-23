@@ -18,10 +18,11 @@ class XFHomeViewController: UIViewController {
         let titleFrame = CGRect(x: 0, y: 64, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = XFPageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
         return titleView
     }()
     
-    fileprivate lazy var pageContentView: XFPageContentView = {
+    fileprivate lazy var pageContentView: XFPageContentView = {[weak self] in
         // 1. 确定内容 frame
         let contentH = kScreenH - kStatusBarH - kNavBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
@@ -34,6 +35,7 @@ class XFHomeViewController: UIViewController {
         }
         
         let contentView = XFPageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
+        contentView.delegate = self
         return contentView
     }()
 
@@ -77,7 +79,19 @@ extension XFHomeViewController {
     }
 }
 
+// MARK:- pageTitleViewDelegate
+extension XFHomeViewController: XFPageTitleViewDelegate {
+    func pageTitleView(pageTitleView: XFPageTitleView, didSelectedIndex index: Int) {
+        pageContentView.scrollToIndex(index: index)
+    }
+}
 
+// MARK:- pageContentViewDelegate
+extension XFHomeViewController: XFPageContentViewDelegate {
+    func pageContentView(pageContentView: XFPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgerss(sourceIndex: sourceIndex, targetIndex: targetIndex, progress: progress)
+    }
+}
 
 
 

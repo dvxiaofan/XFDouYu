@@ -8,25 +8,34 @@
 
 import UIKit
 
+// MARK:- 定义唯一标识
 fileprivate let XFContentCellID = "XFContentCellID"
+
+// MARK:- 定义协议
+protocol XFPageContentViewDelegate: class {
+    func pageContentView(pageContentView: XFPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
+}
 
 class XFPageContentView: UIView {
     
     // MARK:- 定义属性
     fileprivate var childVcs: [UIViewController]
-    fileprivate var parentVc: UIViewController
+    fileprivate weak var parentVc: UIViewController?
+    fileprivate var startOffsetX: CGFloat = 0
+    weak var delegate: XFPageContentViewDelegate?
+    
     
     // MARK:- 懒加载属性
-    fileprivate lazy var collectionView: UICollectionView = {
+    fileprivate lazy var collectionView: UICollectionView = { [weak self] in
         // 1. 创建布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
         
         // 2. 创建 collectionView
-        let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: (self?.bounds)!, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
@@ -39,7 +48,7 @@ class XFPageContentView: UIView {
     }()
 
     // MARK:- 自定义构造函数
-    init(frame: CGRect, childVcs: [UIViewController], parentVc: UIViewController) {
+    init(frame: CGRect, childVcs: [UIViewController], parentVc: UIViewController?) {
         self.childVcs = childVcs
         self.parentVc = parentVc
         
@@ -59,7 +68,7 @@ extension XFPageContentView {
     fileprivate func setUpUI() {
         // 1. 将所有子控制器添加到父控制器中
         for childVc in childVcs {
-            parentVc.addChildViewController(childVc)
+            parentVc?.addChildViewController(childVc)
         }
         
         // 2. 添加 collectionview, 用于显示信息
@@ -96,7 +105,46 @@ extension XFPageContentView: UICollectionViewDataSource {
 // MARK:- UICollectionViewDelegate
 extension XFPageContentView: UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffsetX = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 1. 定义要获取的内容
+        var sourceIndex = 0
+        var targetIndex = 0
+        var progerss: CGFloat = 0
         
+        // 2. 获取进度
+        let offsetX = scrollView.contentOffset.x
+        let ratio = offsetX / scrollView.bounds.width
+        progerss = ratio - floor(ratio)
+        
+        // 3. 判断滑动的方向
+        if offsetX > startOffsetX { // 向左滑动
+            sourceIndex = Int(offsetX / scrollView.bounds.width)
+            targetIndex = sourceIndex + 1
+            
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+            
+            if offsetX - startOffsetX == scrollView.bounds.width {
+                progerss = 1.0
+                targetIndex = sourceIndex
+            }
+        } else  {       // 向右滑动
+            targetIndex = Int(offsetX / scrollView.bounds.width)
+            sourceIndex = targetIndex + 1
+            
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+            
+            progerss = 1 - progerss
+        }
+        
+        // 4. 通知代理
+        delegate?.pageContentView(pageContentView: self, progress: progerss, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
 

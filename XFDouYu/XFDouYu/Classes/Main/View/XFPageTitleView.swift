@@ -11,8 +11,8 @@ import UIKit
 
 // MARK:- 定义常量
 fileprivate let kScroLineH: CGFloat = 2
-fileprivate let kNormalColor: UIColor = UIColor(r: 85, g: 85, b: 85)
-fileprivate let kSelectColor: UIColor = UIColor(r: 255, g: 128, b: 0)
+fileprivate let kNormalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+fileprivate let kSelectColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
 // MARK:- 定义协议
 protocol XFPageTitleViewDelegate: class {
@@ -86,7 +86,7 @@ extension XFPageTitleView {
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = kNormalColor
+            label.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
             label.textAlignment = .center
             
             let labelX: CGFloat = labelW * CGFloat(index)
@@ -114,7 +114,7 @@ extension XFPageTitleView {
         // 2. 添加 scrollLine
         guard let firstLabel = titleLabels.first else { return }
         
-        firstLabel.textColor = kSelectColor
+        firstLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
         
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScroLineH, width: firstLabel.frame.width, height: kScroLineH)
@@ -126,9 +126,7 @@ extension XFPageTitleView {
     /// titleLabel 点击
     @objc fileprivate func titleLabelClick(tapGes: UITapGestureRecognizer) {
         // 1. 获得点击的下标
-        guard let view = tapGes.view else {
-            return
-        }
+        guard let view = tapGes.view else { return }
         let index = view.tag
         
         // 2. 滚动到对应位置
@@ -144,8 +142,8 @@ extension XFPageTitleView {
         let oldLabel = titleLabels[currentIndex]
         
         // 2. 设置 label 颜色
-        newLabel.textColor = kSelectColor
-        oldLabel.textColor = kNormalColor
+        newLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
         
         // 3. scrollLIne 滚动到对应位置
         let scrollLineEndX = scrollLine.frame.width * CGFloat(index)
@@ -156,7 +154,33 @@ extension XFPageTitleView {
         // 4. 记录当前 index
         currentIndex = index
     }
-    
+}
+
+// MARK:- 对外暴露方法
+extension XFPageTitleView {
+    /// 设置当前标题颜色
+    func setTitleWithProgerss(sourceIndex: Int, targetIndex: Int, progress: CGFloat) {
+        // 1. 取出两个 label
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+        // 2. 移动 scrollLine
+        let moveMargin = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveMargin * progress
+        
+        // 3. 颜色渐变
+        // 3.1 取出变化范围
+        let colorDelta = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)
+        
+        // 3.2 变化 sourceLabel
+        sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
+        
+        // 3.3 变化 targetLabel
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        // 4. 记录最新的 index
+        currentIndex = targetIndex
+    }
 }
 
 
