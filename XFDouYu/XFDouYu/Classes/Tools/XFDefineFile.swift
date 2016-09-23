@@ -22,6 +22,7 @@ func XFLog<T>(_ message : T, file : String = #file, lineNumber : Int = #line) {
 
 let kStatusBarH: CGFloat = 20
 let kNavBarH: CGFloat = 44
+let kTabBarH: CGFloat = 44
 
 // 屏幕
 let kScreenW = UIScreen.main.bounds.width

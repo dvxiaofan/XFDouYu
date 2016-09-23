@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="O5M-bf-dkq" customClass="XFCollectionNormalCell" customModule="XFDouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="236"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-kD-bWE" userLabel="icon"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小烦来斗鱼了哈哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv1-KJ-QXD" userLabel="uname">
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的天呢, 这里在搞什么呢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTO-a3-Nde" userLabel="roomDescriLabel">
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr1-L8-Kfl" userLabel="online">
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="4kr-mf-PdI"/>
+                        <constraint firstAttribute="height" constant="22" id="hDA-Yg-bJc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <state key="normal" title="2.4万" image="Image_online">
+                        <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Udv-T3-LlR" userLabel="user">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="1Dn-6f-SPe"/>
+                        <constraint firstAttribute="width" constant="16" id="fSH-1z-hU0"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kd2-kD-bWE" secondAttribute="trailing" id="6za-kr-v3T"/>
+                <constraint firstAttribute="trailing" secondItem="gv1-KJ-QXD" secondAttribute="trailing" constant="6" id="GL7-bY-moi"/>
+                <constraint firstAttribute="trailing" secondItem="vTO-a3-Nde" secondAttribute="trailing" constant="5" id="J1k-EP-MSx"/>
+                <constraint firstItem="kd2-kD-bWE" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" id="cAB-em-OuL"/>
+                <constraint firstAttribute="bottom" secondItem="vTO-a3-Nde" secondAttribute="bottom" constant="9" id="e11-Xf-nfY"/>
+                <constraint firstItem="vTO-a3-Nde" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" constant="10" id="ee4-Id-JVb"/>
+                <constraint firstItem="vTO-a3-Nde" firstAttribute="top" secondItem="kd2-kD-bWE" secondAttribute="bottom" constant="8" id="gk6-FC-1xK"/>
+                <constraint firstItem="kd2-kD-bWE" firstAttribute="top" secondItem="O5M-bf-dkq" secondAttribute="top" id="gzu-aJ-AQV"/>
+                <constraint firstAttribute="trailing" secondItem="Jr1-L8-Kfl" secondAttribute="trailing" constant="5" id="iU2-Jz-UNH"/>
+                <constraint firstItem="gv1-KJ-QXD" firstAttribute="leading" secondItem="Udv-T3-LlR" secondAttribute="trailing" constant="3" id="m05-kj-yS7"/>
+                <constraint firstItem="Udv-T3-LlR" firstAttribute="centerY" secondItem="gv1-KJ-QXD" secondAttribute="centerY" id="nri-3W-Pkc"/>
+                <constraint firstItem="vTO-a3-Nde" firstAttribute="top" secondItem="Udv-T3-LlR" secondAttribute="bottom" constant="12" id="o3N-r5-CIB"/>
+                <constraint firstItem="Udv-T3-LlR" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" constant="9" id="tiu-2L-DOS"/>
+                <constraint firstItem="Jr1-L8-Kfl" firstAttribute="top" secondItem="O5M-bf-dkq" secondAttribute="top" constant="5" id="xNQ-IB-RG5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImageView" destination="kd2-kD-bWE" id="jng-ES-sxE"/>
+                <outlet property="nickNameLabel" destination="gv1-KJ-QXD" id="F0H-DY-kNh"/>
+                <outlet property="onlineBtn" destination="Jr1-L8-Kfl" id="Y3G-jF-9gc"/>
+                <outlet property="roomDescriLabl" destination="vTO-a3-Nde" id="kJZ-MN-uKl"/>
+            </connections>
+            <point key="canvasLocation" x="-265.5" y="-157"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_player_normal" width="14" height="14"/>
+    </resources>
+</document>

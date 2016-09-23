@@ -24,7 +24,7 @@ class XFHomeViewController: UIViewController {
     
     fileprivate lazy var pageContentView: XFPageContentView = {[weak self] in
         // 1. 确定内容 frame
-        let contentH = kScreenH - kStatusBarH - kNavBarH
+        let contentH = kScreenH - kNavBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
         // 2. 确定所有控制器
         var childVcs = [UIViewController]()

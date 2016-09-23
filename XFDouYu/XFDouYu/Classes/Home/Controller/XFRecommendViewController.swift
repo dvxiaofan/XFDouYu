@@ -34,7 +34,12 @@ class XFRecommendViewController: UIViewController {
         // 2. 创建 colloectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        
+        collectionView.backgroundColor = UIColor.white
+        
+        collectionView.register(UINib(nibName: "XFCollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib(nibName: "XFCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
+        collectionView.register(UINib(nibName: "XFCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,withReuseIdentifier: kHeaderViewID)
         
         return collectionView
     }()
@@ -58,7 +63,7 @@ extension XFRecommendViewController {
 
 
 // MARK:- UICollectionViewDataSource
-extension XFRecommendViewController: UICollectionViewDataSource {
+extension XFRecommendViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
     }
@@ -71,11 +76,34 @@ extension XFRecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
         
-        cell.backgroundColor = UIColor.orange
+        // 定义 cell
+        var cell : XFCollectionBaseCell!
+        
+        // 取出 cell
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! XFCollectionPrettyCell
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! XFCollectionNormalCell
+        }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        // 1. 取出 headerView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! XFCollectionHeaderView
+        
+        headerView.backgroundColor = UIColor.white
+        
+        return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kItemW, height: kPrettyItemH)
+        }
+        return CGSize(width: kItemW, height: kNormalItemH)
     }
 }
 
