@@ -15,7 +15,7 @@ class XFHomeViewController: UIViewController {
     
     // MARK:- 懒加载
     fileprivate lazy var pageTitleView: XFPageTitleView = {
-        let titleFrame = CGRect(x: 0, y: 64, width: kScreenW, height: kTitleViewH)
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = XFPageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
@@ -28,6 +28,7 @@ class XFHomeViewController: UIViewController {
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH + kTitleViewH, width: kScreenW, height: contentH)
         // 2. 确定所有控制器
         var childVcs = [UIViewController]()
+        childVcs.append(XFRecommendViewController())
         for _ in 0..<4 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))

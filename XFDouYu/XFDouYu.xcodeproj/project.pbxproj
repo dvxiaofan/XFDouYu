@@ -18,6 +18,7 @@
 		BD0F88C11D92D891002137C4 /* XFLive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0F88C01D92D891002137C4 /* XFLive.storyboard */; };
 		BD0F88C31D92D89C002137C4 /* XFProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0F88C21D92D89C002137C4 /* XFProfile.storyboard */; };
 		BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F88C61D92DF49002137C4 /* XFHomeViewController.swift */; };
+		BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C811D95756B002984D0 /* XFRecommendViewController.swift */; };
 		BD88399D1D93CA1600494760 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */; };
 		BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */; };
 		BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */; };
@@ -38,6 +39,7 @@
 		BD0F88C01D92D891002137C4 /* XFLive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XFLive.storyboard; sourceTree = "<group>"; };
 		BD0F88C21D92D89C002137C4 /* XFProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XFProfile.storyboard; sourceTree = "<group>"; };
 		BD0F88C61D92DF49002137C4 /* XFHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFHomeViewController.swift; sourceTree = "<group>"; };
+		BD717C811D95756B002984D0 /* XFRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendViewController.swift; sourceTree = "<group>"; };
 		BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFPageTitleView.swift; sourceTree = "<group>"; };
 		BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFDefineFile.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				BD0F88BC1D92D859002137C4 /* XFHome.storyboard */,
 				BD0F88C61D92DF49002137C4 /* XFHomeViewController.swift */,
+				BD717C811D95756B002984D0 /* XFRecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */,
 				BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */,
 				BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */,
+				BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */,
 				BD0620DD1D9426D20046AAD7 /* UIColor-Extension.swift in Sources */,
 				BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */,
 				BD0F88961D92CEEC002137C4 /* AppDelegate.swift in Sources */,
@@ -420,7 +424,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = V5T362FM3J;
 				INFOPLIST_FILE = XFDouYu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devxiaofan.XFDouYu;
@@ -436,7 +440,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = V5T362FM3J;
 				INFOPLIST_FILE = XFDouYu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devxiaofan.XFDouYu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
