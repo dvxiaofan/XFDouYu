@@ -119,12 +119,12 @@ extension XFPageContentView: UICollectionViewDelegate {
         // 1. 定义要获取的内容
         var sourceIndex = 0
         var targetIndex = 0
-        var progerss: CGFloat = 0
+        var progress: CGFloat = 0
         
         // 2. 获取进度
         let offsetX = scrollView.contentOffset.x
         let ratio = offsetX / scrollView.bounds.width
-        progerss = ratio - floor(ratio)
+        progress = ratio - floor(ratio)
         
         // 3. 判断滑动的方向
         if offsetX > startOffsetX {     // 向左滑动
@@ -135,8 +135,8 @@ extension XFPageContentView: UICollectionViewDelegate {
                 targetIndex = childVcs.count - 1
             }
             
-            if offsetX - startOffsetX == scrollView.bounds.width {
-                progerss = 1.0
+            if offsetX - startOffsetX == scrollView.bounds.width || progress == 0{
+                progress = 1.0
                 targetIndex = sourceIndex
             }
         } else  {                       // 向右滑动
@@ -147,11 +147,11 @@ extension XFPageContentView: UICollectionViewDelegate {
                 sourceIndex = childVcs.count - 1
             }
             
-            progerss = 1 - progerss
+            progress = 1 - progress
         }
         
         // 4. 通知代理
-        delegate?.pageContentView(pageContentView: self, progress: progerss, sourceIndex: sourceIndex, targetIndex: targetIndex)
+        delegate?.pageContentView(pageContentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
 

@@ -129,6 +129,11 @@ extension XFPageTitleView {
         guard let view = tapGes.view else { return }
         let index = view.tag
         
+        // 如果重复点击当前标题, 不用滚动
+        if currentIndex == index {
+            return
+        }
+        
         // 2. 滚动到对应位置
         scrollToIndex(index: index)
         
