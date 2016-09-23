@@ -23,6 +23,7 @@ class XFPageContentView: UIView {
     fileprivate weak var parentVc: UIViewController?
     fileprivate var startOffsetX: CGFloat = 0
     weak var delegate: XFPageContentViewDelegate?
+    fileprivate var isForbidScrollDelegate: Bool = false
     
     
     // MARK:- 懒加载属性
@@ -105,10 +106,16 @@ extension XFPageContentView: UICollectionViewDataSource {
 // MARK:- UICollectionViewDelegate
 extension XFPageContentView: UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScrollDelegate = false
+        
         startOffsetX = scrollView.contentOffset.x
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 0. 判断是否是点击
+        if isForbidScrollDelegate { return }
+        
         // 1. 定义要获取的内容
         var sourceIndex = 0
         var targetIndex = 0
@@ -120,7 +127,7 @@ extension XFPageContentView: UICollectionViewDelegate {
         progerss = ratio - floor(ratio)
         
         // 3. 判断滑动的方向
-        if offsetX > startOffsetX { // 向左滑动
+        if offsetX > startOffsetX {     // 向左滑动
             sourceIndex = Int(offsetX / scrollView.bounds.width)
             targetIndex = sourceIndex + 1
             
@@ -132,7 +139,7 @@ extension XFPageContentView: UICollectionViewDelegate {
                 progerss = 1.0
                 targetIndex = sourceIndex
             }
-        } else  {       // 向右滑动
+        } else  {                       // 向右滑动
             targetIndex = Int(offsetX / scrollView.bounds.width)
             sourceIndex = targetIndex + 1
             
@@ -151,8 +158,12 @@ extension XFPageContentView: UICollectionViewDelegate {
 // MARK:- 对外暴露方法
 extension XFPageContentView {
     func scrollToIndex(index: Int) {
-        let offset = CGPoint(x: CGFloat(index) * collectionView.bounds.width, y: 0)
-        collectionView.setContentOffset(offset, animated: false)
+        // 1. 记录需要执行的代理方法
+        isForbidScrollDelegate = true
+        
+        // 2. 滚到对应位置
+        let offsetX = CGPoint(x: CGFloat(index) * collectionView.bounds.width, y: 0)
+        collectionView.setContentOffset(offsetX, animated: false)
     }
 }
 

@@ -42,7 +42,6 @@ class XFHomeViewController: UIViewController {
     // MARK:- 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 设置 UI 界面
         setUpUI()
     }
