@@ -123,7 +123,7 @@ extension XFRecommendViewController: UICollectionViewDataSource, UICollectionVie
         // 1. 取出 headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! XFCollectionHeaderView
         
-        headerView.backgroundColor = UIColor.white
+        headerView.group = recommentVM.anchorGroups[indexPath.section]
         
         return headerView
     }

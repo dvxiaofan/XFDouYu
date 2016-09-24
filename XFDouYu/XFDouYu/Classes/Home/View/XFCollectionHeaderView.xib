@@ -13,7 +13,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ws-W9-fVk">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="columnYanzhiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-QN-xga">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="columnYanzhiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-QN-xga" userLabel="headerIcon">
                             <constraints>
                                 <constraint firstAttribute="width" constant="18" id="awG-Bf-rXO"/>
                             </constraints>
@@ -36,7 +36,7 @@
                                 </attributedString>
                             </state>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-gL-oDu">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-gL-oDu" userLabel="headerName">
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -68,7 +68,11 @@
                 <constraint firstItem="9ws-W9-fVk" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="kt3-gF-Bcu"/>
                 <constraint firstItem="9ws-W9-fVk" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="wRW-yH-EkU"/>
             </constraints>
-            <point key="canvasLocation" x="-382" y="-168"/>
+            <connections>
+                <outlet property="headerIconView" destination="Xtp-QN-xga" id="rY7-cA-V9E"/>
+                <outlet property="headerNameLabel" destination="VkQ-gL-oDu" id="PVy-fZ-0yZ"/>
+            </connections>
+            <point key="canvasLocation" x="-134" y="-161"/>
         </collectionReusableView>
     </objects>
     <resources>

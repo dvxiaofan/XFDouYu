@@ -14,12 +14,13 @@ class XFCollectionNormalCell: XFCollectionBaseCell {
     @IBOutlet weak var roomDescriLabl: UILabel!
     
     // MARK:- 定义模型属性
-//    override var anchor: XFAnchorModel? {
-//        didSet {
-//            super.anchor = anchor
-//            
-//            
-//        }
-//    }
+    override var anchor: XFAnchorModel? {
+        didSet {
+            super.anchor = anchor
+            
+            // 房号名字
+            roomDescriLabl.text = anchor?.room_name
+        }
+    }
 
 }

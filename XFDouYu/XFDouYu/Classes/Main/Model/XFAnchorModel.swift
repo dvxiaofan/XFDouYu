@@ -19,7 +19,7 @@ class XFAnchorModel: NSObject {
     
     var room_name: String = ""
     var nickname: String = ""
-    var onlie: Int = 0
+    var online: Float = 0
     var anchor_city: String = ""
     
     init(dict: [String: NSObject]) {

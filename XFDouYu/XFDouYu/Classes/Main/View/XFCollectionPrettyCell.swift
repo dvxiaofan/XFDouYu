@@ -12,5 +12,11 @@ class XFCollectionPrettyCell: XFCollectionBaseCell {
 
     @IBOutlet weak var cityBtn: UIButton!
     
-
+    override var anchor: XFAnchorModel? {
+        didSet {
+            super.anchor = anchor
+            
+            cityBtn.setTitle(anchor?.anchor_city, for: .normal)
+        }
+    }
 }

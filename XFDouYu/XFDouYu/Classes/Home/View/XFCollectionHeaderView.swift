@@ -9,10 +9,15 @@
 import UIKit
 
 class XFCollectionHeaderView: UICollectionReusableView {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    // MARK:- 拖线属性
+    @IBOutlet weak var headerIconView: UIImageView!
+    @IBOutlet weak var headerNameLabel: UILabel!
     
+    // MARK:- 定义模型属性
+    var group: XFAnchorGroup? {
+        didSet {
+            headerIconView.image = UIImage(named: group?.icon_name ?? "home_header_normal")
+            headerNameLabel.text = group?.tag_name
+        }
+    }
 }

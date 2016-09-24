@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class XFCollectionBaseCell: UICollectionViewCell {
     
@@ -22,10 +23,11 @@ class XFCollectionBaseCell: UICollectionViewCell {
             
             // 取出在线人数显示的文字
             var onlineStr: String = ""
-            if anchor.onlie >= 10000 {
-                onlineStr = "\(Int(anchor.onlie / 10000))万"
+            
+            if anchor.online >= 10000 {
+                onlineStr = "\(String(format: "%.1f", anchor.online / 10000))万"
             } else {
-                onlineStr = "\(anchor.onlie)"
+                onlineStr = "\(Int(anchor.online))"
             }
             onlineBtn.setTitle(onlineStr, for: .normal)
             
@@ -33,8 +35,8 @@ class XFCollectionBaseCell: UICollectionViewCell {
             nickNameLabel.text = anchor.nickname
             
             // 封面图片
-//            guard let iconURL = NSURL(string: anchor.vertical_src) else { return }
-            
+            guard let iconURL = URL(string: anchor.vertical_src) else { return }
+            iconImageView.kf.setImage(with: iconURL)
         }
     }
 }
