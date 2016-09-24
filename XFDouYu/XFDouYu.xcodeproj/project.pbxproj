@@ -31,6 +31,12 @@
 		BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */; };
 		BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */; };
 		BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AE2D1D93E2D3006CC5C7 /* XFCommon.swift */; };
+		BDEF137F1D964EE900F4DC8E /* XFNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF137E1D964EE900F4DC8E /* XFNetworkTool.swift */; };
+		BDEF13811D965A6500F4DC8E /* XFRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13801D965A6500F4DC8E /* XFRecommendViewModel.swift */; };
+		BDEF13831D965AF100F4DC8E /* XFAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13821D965AF100F4DC8E /* XFAnchorGroup.swift */; };
+		BDEF13851D965B0200F4DC8E /* XFAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13841D965B0200F4DC8E /* XFAnchorModel.swift */; };
+		BDEF13871D965B4700F4DC8E /* XFCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */; };
+		BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +67,12 @@
 		BDE1AE291D93E014006CC5C7 /* XFPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFPageTitleView.swift; sourceTree = "<group>"; };
 		BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFDefineFile.swift; sourceTree = "<group>"; };
 		BDE1AE2D1D93E2D3006CC5C7 /* XFCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCommon.swift; sourceTree = "<group>"; };
+		BDEF137E1D964EE900F4DC8E /* XFNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFNetworkTool.swift; sourceTree = "<group>"; };
+		BDEF13801D965A6500F4DC8E /* XFRecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendViewModel.swift; sourceTree = "<group>"; };
+		BDEF13821D965AF100F4DC8E /* XFAnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAnchorGroup.swift; sourceTree = "<group>"; };
+		BDEF13841D965B0200F4DC8E /* XFAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAnchorModel.swift; sourceTree = "<group>"; };
+		BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCycleModel.swift; sourceTree = "<group>"; };
+		BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		D727A2AEDEF7CECA588EE1E7 /* Pods_XFDouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XFDouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,10 +142,10 @@
 		BD0F88AE1D92D580002137C4 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				BD0F88B21D92D580002137C4 /* ViewModel */,
 				BD0F88B01D92D580002137C4 /* Model */,
 				BD0F88B11D92D580002137C4 /* View */,
 				BD0F88AF1D92D580002137C4 /* Controller */,
-				BD0F88B21D92D580002137C4 /* ViewModel */,
 			);
 			name = "Home(首页)";
 			path = Home;
@@ -152,6 +164,7 @@
 		BD0F88B01D92D580002137C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 		BD0F88B21D92D580002137C4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BDEF13801D965A6500F4DC8E /* XFRecommendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +217,8 @@
 		BD0F88B61D92D580002137C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDEF13821D965AF100F4DC8E /* XFAnchorGroup.swift */,
+				BDEF13841D965B0200F4DC8E /* XFAnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +252,7 @@
 				BD88399B1D93C9F100494760 /* Extension */,
 				BDE1AE2D1D93E2D3006CC5C7 /* XFCommon.swift */,
 				BDE1AE2B1D93E2BD006CC5C7 /* XFDefineFile.swift */,
+				BDEF137E1D964EE900F4DC8E /* XFNetworkTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -245,6 +262,7 @@
 			children = (
 				BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */,
 				BD0620DC1D9426D20046AAD7 /* UIColor-Extension.swift */,
+				BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -399,12 +417,18 @@
 			files = (
 				BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */,
 				BD717C8E1D958088002984D0 /* XFCollectionPrettyCell.swift in Sources */,
+				BDEF13851D965B0200F4DC8E /* XFAnchorModel.swift in Sources */,
 				BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */,
+				BDEF13871D965B4700F4DC8E /* XFCycleModel.swift in Sources */,
+				BDEF13831D965AF100F4DC8E /* XFAnchorGroup.swift in Sources */,
 				BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */,
 				BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */,
+				BDEF137F1D964EE900F4DC8E /* XFNetworkTool.swift in Sources */,
 				BD0620DD1D9426D20046AAD7 /* UIColor-Extension.swift in Sources */,
+				BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */,
 				BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */,
 				BD717C8A1D95802D002984D0 /* XFCollectionNormalCell.swift in Sources */,
+				BDEF13811D965A6500F4DC8E /* XFRecommendViewModel.swift in Sources */,
 				BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */,
 				BD0F88961D92CEEC002137C4 /* AppDelegate.swift in Sources */,
 				BD0620DF1D94295A0046AAD7 /* XFPageContentView.swift in Sources */,

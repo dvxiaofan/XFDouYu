@@ -13,5 +13,13 @@ class XFCollectionNormalCell: XFCollectionBaseCell {
     // MARK:- 拖线属性
     @IBOutlet weak var roomDescriLabl: UILabel!
     
+    // MARK:- 定义模型属性
+//    override var anchor: XFAnchorModel? {
+//        didSet {
+//            super.anchor = anchor
+//            
+//            
+//        }
+//    }
 
 }

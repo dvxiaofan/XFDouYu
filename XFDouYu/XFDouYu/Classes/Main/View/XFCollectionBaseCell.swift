@@ -15,5 +15,37 @@ class XFCollectionBaseCell: UICollectionViewCell {
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var onlineBtn: UIButton!
     
-    
+    // MARK:- 定义属性
+    var anchor: XFAnchorModel? {
+        didSet {
+            guard let anchor = anchor else { return }
+            
+            // 取出在线人数显示的文字
+            var onlineStr: String = ""
+            if anchor.onlie >= 10000 {
+                onlineStr = "\(Int(anchor.onlie / 10000))万"
+            } else {
+                onlineStr = "\(anchor.onlie)"
+            }
+            onlineBtn.setTitle(onlineStr, for: .normal)
+            
+            // 昵称
+            nickNameLabel.text = anchor.nickname
+            
+            // 封面图片
+//            guard let iconURL = NSURL(string: anchor.vertical_src) else { return }
+            
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
