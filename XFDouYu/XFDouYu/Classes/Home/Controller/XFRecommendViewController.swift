@@ -9,11 +9,11 @@
 import UIKit
 
 // MARK:- 定义常量
-fileprivate let kItemMargin: CGFloat = 10
+fileprivate let kItemMargin: CGFloat = 6
 fileprivate let kItemW: CGFloat = (kScreenW - 3 * kItemMargin) / 2
 fileprivate let kNormalItemH: CGFloat = kItemW * 3 / 4
 fileprivate let kPrettyItemH: CGFloat = kItemW * 4 / 3
-fileprivate let kHeaderViewH: CGFloat = 50
+fileprivate let kHeaderViewH: CGFloat = 35
 
 fileprivate let kNormalCellID = "kNormalCellID"
 fileprivate let kPrettyCellID = "kPrettyCellID"
@@ -57,6 +57,7 @@ class XFRecommendViewController: UIViewController {
 extension XFRecommendViewController {
     fileprivate func setUpUI() {
         view.addSubview(collectionView)
+        
     }
 }
 

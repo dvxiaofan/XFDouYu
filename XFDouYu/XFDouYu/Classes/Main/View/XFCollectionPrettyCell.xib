@@ -32,6 +32,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_normal" translatesAutoresizingMaskIntoConstraints="NO" id="5Iq-Tm-1Zh" userLabel="user">
                     <constraints>
                         <constraint firstAttribute="width" constant="18" id="XQn-kK-wdd"/>
+                        <constraint firstAttribute="height" constant="18" id="gZU-0O-1gu"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu5-wk-Mut" userLabel="online">
@@ -50,18 +51,17 @@
             <constraints>
                 <constraint firstItem="Mub-jf-Cli" firstAttribute="centerY" secondItem="U4k-3h-GbL" secondAttribute="centerY" id="0J9-Qn-kSR"/>
                 <constraint firstAttribute="trailing" secondItem="SdJ-Z8-F4W" secondAttribute="trailing" id="B6C-bY-duQ"/>
-                <constraint firstItem="hu5-wk-Mut" firstAttribute="trailing" secondItem="Mub-jf-Cli" secondAttribute="trailing" id="Dbu-UM-U68"/>
-                <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="top" secondItem="U4k-3h-GbL" secondAttribute="top" constant="3" id="LkI-Tb-QWD"/>
+                <constraint firstItem="U4k-3h-GbL" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="bottom" constant="3" id="BeD-q7-Jvd"/>
                 <constraint firstItem="SdJ-Z8-F4W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SCq-LV-N1c"/>
-                <constraint firstAttribute="bottom" secondItem="U4k-3h-GbL" secondAttribute="bottom" id="WBl-gT-Yq4"/>
-                <constraint firstAttribute="bottom" secondItem="SdJ-Z8-F4W" secondAttribute="bottom" constant="28" id="Zlz-KT-hBX"/>
-                <constraint firstItem="SdJ-Z8-F4W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bt0-dR-U0l"/>
+                <constraint firstItem="hu5-wk-Mut" firstAttribute="trailing" secondItem="SdJ-Z8-F4W" secondAttribute="trailing" constant="-5" id="UEU-lc-0cb"/>
                 <constraint firstItem="U4k-3h-GbL" firstAttribute="leading" secondItem="5Iq-Tm-1Zh" secondAttribute="trailing" constant="2" id="cQi-kh-MOR"/>
-                <constraint firstItem="Mub-jf-Cli" firstAttribute="bottom" secondItem="U4k-3h-GbL" secondAttribute="bottom" id="eg4-vY-DKW"/>
-                <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="bottom" constant="10" id="jjE-BU-1hs"/>
-                <constraint firstAttribute="trailing" secondItem="hu5-wk-Mut" secondAttribute="trailing" constant="5" id="qA9-uu-Swe"/>
-                <constraint firstItem="hu5-wk-Mut" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="qgo-c1-3tZ"/>
-                <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="leading" secondItem="SdJ-Z8-F4W" secondAttribute="leading" constant="6" id="xde-ie-6Vq"/>
+                <constraint firstItem="Mub-jf-Cli" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="bottom" constant="8" id="cde-vx-BEO"/>
+                <constraint firstItem="SdJ-Z8-F4W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="cfJ-mF-uBN"/>
+                <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="centerY" secondItem="U4k-3h-GbL" secondAttribute="centerY" id="d5i-Io-w5z"/>
+                <constraint firstAttribute="bottom" secondItem="U4k-3h-GbL" secondAttribute="bottom" constant="5" id="kXE-0i-TeZ"/>
+                <constraint firstAttribute="trailing" secondItem="Mub-jf-Cli" secondAttribute="trailing" id="utj-Ar-RPQ"/>
+                <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="leading" secondItem="SdJ-Z8-F4W" secondAttribute="leading" id="xde-ie-6Vq"/>
+                <constraint firstItem="hu5-wk-Mut" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="top" constant="5" id="zqF-gN-Hf0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

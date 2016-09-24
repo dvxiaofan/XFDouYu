@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Vc-Sl-HOy">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +9,7 @@
         <scene sceneID="SN6-rY-qG2">
             <objects>
                 <navigationController id="9Vc-Sl-HOy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="直播" image="btn_live_normal" selectedImage="btn_live_selected" id="BpB-IO-cQG"/>
+                    <tabBarItem key="tabBarItem" title="直播" image="tabLiving" selectedImage="tabLivingHL" id="BpB-IO-cQG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7mc-Ck-Cen">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -45,7 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_live_normal" width="24" height="24"/>
-        <image name="btn_live_selected" width="24" height="24"/>
+        <image name="tabLiving" width="24" height="24"/>
+        <image name="tabLivingHL" width="24" height="24"/>
     </resources>
 </document>

@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 设置全部 tabbar 颜色
         UITabBar.appearance().tintColor = UIColor.orange
+        UINavigationBar.appearance().barTintColor = UIColor(patternImage: UIImage(named: "nav-bg")!)
+        
         
         return true
     }

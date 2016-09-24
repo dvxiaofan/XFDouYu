@@ -42,20 +42,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Jr1-L8-Kfl" firstAttribute="trailing" secondItem="kd2-kD-bWE" secondAttribute="trailing" constant="-5" id="4il-Pa-AW0"/>
                 <constraint firstAttribute="trailing" secondItem="kd2-kD-bWE" secondAttribute="trailing" id="6za-kr-v3T"/>
                 <constraint firstAttribute="trailing" secondItem="gv1-KJ-QXD" secondAttribute="trailing" constant="6" id="GL7-bY-moi"/>
                 <constraint firstAttribute="trailing" secondItem="vTO-a3-Nde" secondAttribute="trailing" constant="5" id="J1k-EP-MSx"/>
+                <constraint firstItem="vTO-a3-Nde" firstAttribute="top" secondItem="Udv-T3-LlR" secondAttribute="bottom" constant="11" id="WHz-Tz-h6U"/>
                 <constraint firstItem="kd2-kD-bWE" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" id="cAB-em-OuL"/>
                 <constraint firstAttribute="bottom" secondItem="vTO-a3-Nde" secondAttribute="bottom" constant="9" id="e11-Xf-nfY"/>
-                <constraint firstItem="vTO-a3-Nde" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" constant="10" id="ee4-Id-JVb"/>
-                <constraint firstItem="vTO-a3-Nde" firstAttribute="top" secondItem="kd2-kD-bWE" secondAttribute="bottom" constant="8" id="gk6-FC-1xK"/>
-                <constraint firstItem="kd2-kD-bWE" firstAttribute="top" secondItem="O5M-bf-dkq" secondAttribute="top" id="gzu-aJ-AQV"/>
-                <constraint firstAttribute="trailing" secondItem="Jr1-L8-Kfl" secondAttribute="trailing" constant="5" id="iU2-Jz-UNH"/>
+                <constraint firstItem="vTO-a3-Nde" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" id="ee4-Id-JVb"/>
+                <constraint firstItem="vTO-a3-Nde" firstAttribute="top" secondItem="kd2-kD-bWE" secondAttribute="bottom" constant="5" id="gk6-FC-1xK"/>
+                <constraint firstItem="kd2-kD-bWE" firstAttribute="top" secondItem="O5M-bf-dkq" secondAttribute="top" constant="5" id="gzu-aJ-AQV"/>
                 <constraint firstItem="gv1-KJ-QXD" firstAttribute="leading" secondItem="Udv-T3-LlR" secondAttribute="trailing" constant="3" id="m05-kj-yS7"/>
                 <constraint firstItem="Udv-T3-LlR" firstAttribute="centerY" secondItem="gv1-KJ-QXD" secondAttribute="centerY" id="nri-3W-Pkc"/>
-                <constraint firstItem="vTO-a3-Nde" firstAttribute="top" secondItem="Udv-T3-LlR" secondAttribute="bottom" constant="12" id="o3N-r5-CIB"/>
+                <constraint firstItem="Jr1-L8-Kfl" firstAttribute="top" secondItem="kd2-kD-bWE" secondAttribute="top" constant="5" id="o3x-aO-9dI"/>
                 <constraint firstItem="Udv-T3-LlR" firstAttribute="leading" secondItem="O5M-bf-dkq" secondAttribute="leading" constant="9" id="tiu-2L-DOS"/>
-                <constraint firstItem="Jr1-L8-Kfl" firstAttribute="top" secondItem="O5M-bf-dkq" secondAttribute="top" constant="5" id="xNQ-IB-RG5"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -65,7 +65,7 @@
                 <outlet property="onlineBtn" destination="Jr1-L8-Kfl" id="Y3G-jF-9gc"/>
                 <outlet property="roomDescriLabl" destination="vTO-a3-Nde" id="kJZ-MN-uKl"/>
             </connections>
-            <point key="canvasLocation" x="-265.5" y="-157"/>
+            <point key="canvasLocation" x="-420" y="-145"/>
         </view>
     </objects>
     <resources>

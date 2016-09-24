@@ -65,15 +65,17 @@ extension XFHomeViewController {
     }
     
     fileprivate func setUpNavBar() {
+        
+        
         // 左边 item
-        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "homeLogoIcon")
         
         // 右边 item
         let size = CGSize(width: 40, height: 40)
         
-        let searchItem = UIBarButtonItem(imageName: "btn_search", highlightImgName: "btn_search_clicked", size: size)
-        let ercodeItem = UIBarButtonItem(imageName: "Image_scan", highlightImgName: "Image_scan_click", size: size)
-        let historyItem = UIBarButtonItem(imageName: "image_my_history", highlightImgName: "Image_my_history_click", size: size)
+        let searchItem = UIBarButtonItem(imageName: "searchIcon", highlightImgName: "searchIconHL", size: size)
+        let ercodeItem = UIBarButtonItem(imageName: "scanIcon", highlightImgName: "scanIconHL", size: size)
+        let historyItem = UIBarButtonItem(imageName: "viewHistoryIcon", highlightImgName: "viewHistoryIconHL", size: size)
         
         navigationItem.rightBarButtonItems = [searchItem, ercodeItem, historyItem]
     }
