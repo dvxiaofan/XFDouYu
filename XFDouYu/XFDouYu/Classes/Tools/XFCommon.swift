@@ -12,5 +12,6 @@ let kHomeRecHotUrl = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"
 
 let kHomeRecYanUrl = "http://capi.douyucdn.cn/api/v1/getVerticalRoom"
 
-let kHomeRecScroUrl = "http://capi.douyucdn.cn/api/v1/slide/6?version=2.301&client_sys=ios"
+let KHomeRecOtheUrl = "http://capi.douyucdn.cn/api/v1/getHotCate"
 
+let kHomeRecCycleUrl = "http://capi.douyucdn.cn/api/v1/slide/6"

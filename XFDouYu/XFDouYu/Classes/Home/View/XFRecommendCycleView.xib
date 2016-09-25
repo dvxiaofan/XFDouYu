@@ -11,14 +11,17 @@
             <rect key="frame" x="0.0" y="0.0" width="372" height="168"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NtE-Iq-lKW">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RMd-kh-qgF">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NtE-Iq-lKW">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RMd-kh-qgF">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="GiG-Un-PBY"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="ZIi-Sh-IUn"/>
+                    </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="d3l-IS-VaT">
                     <color key="pageIndicatorTintColor" white="0.88024328860000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,7 +34,7 @@
                 <constraint firstItem="d3l-IS-VaT" firstAttribute="centerX" secondItem="NtE-Iq-lKW" secondAttribute="centerX" id="7Od-vs-fgS"/>
                 <constraint firstAttribute="trailing" secondItem="NtE-Iq-lKW" secondAttribute="trailing" id="Nlc-pP-iyE"/>
                 <constraint firstItem="NtE-Iq-lKW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QvS-Vy-dqE"/>
-                <constraint firstAttribute="bottom" secondItem="d3l-IS-VaT" secondAttribute="bottom" constant="7" id="TjM-Ry-oP4"/>
+                <constraint firstAttribute="bottom" secondItem="d3l-IS-VaT" secondAttribute="bottom" constant="-10" id="TjM-Ry-oP4"/>
                 <constraint firstAttribute="bottom" secondItem="NtE-Iq-lKW" secondAttribute="bottom" id="no0-pI-la9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -40,7 +43,7 @@
                 <outlet property="collectionView" destination="NtE-Iq-lKW" id="hMe-q0-fEB"/>
                 <outlet property="pageControl" destination="d3l-IS-VaT" id="1sg-tO-9uT"/>
             </connections>
-            <point key="canvasLocation" x="-120" y="-111"/>
+            <point key="canvasLocation" x="-459" y="-75"/>
         </view>
     </objects>
 </document>

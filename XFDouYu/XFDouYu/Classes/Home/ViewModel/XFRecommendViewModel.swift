@@ -19,7 +19,7 @@ class XFRecommendViewModel {
 
 // MARK:- 发送网络请求
 extension XFRecommendViewModel {
-    func requestData(finishedCallBack: @escaping () -> ()) {
+    func requestData(_ finishedCallBack: @escaping () -> ()) {
         // 1. 定义参数
         let parameters = ["limit": "4", "offset": "0", "time": NSDate.xf_getCurrentDate()]
         
@@ -79,7 +79,7 @@ extension XFRecommendViewModel {
         // 5. 请求2-12部分游戏数据
         disGroup.enter()
         
-        XFNetworkTool.requestData(type: .GET, URLString: kHomeRecHotUrl, parameters: parameters) { (result) in
+        XFNetworkTool.requestData(type: .GET, URLString: KHomeRecOtheUrl, parameters: parameters) { (result) in
             
             // 1. 将result 转成字典模型
             guard let resultDic = result as? [String: NSObject] else { return }
@@ -100,6 +100,22 @@ extension XFRecommendViewModel {
         disGroup.notify(queue: DispatchQueue.main) {
             self.anchorGroups.insert(self.pertyDataGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
+            
+            finishedCallBack()
+        }
+    }
+    
+    // 加载头部循环数据
+    func requestCycleData(_ finishedCallBack: @escaping () -> ()) {
+        XFNetworkTool.requestData(type: .GET, URLString: kHomeRecCycleUrl, parameters: ["version" : "2.300"]) { (result) in
+            
+            guard let resultDic = result as? [String: NSObject] else { return }
+            
+            guard let dataArray = resultDic["data"] as? [[String: NSObject]] else { return }
+            
+            for dict in dataArray {
+                self.cycleModel.append(XFCycleModel(dict: dict))
+            }
             
             finishedCallBack()
         }

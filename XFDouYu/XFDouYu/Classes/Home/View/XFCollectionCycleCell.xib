@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="286" height="178"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x6U-2e-Y3w" userLabel="icon"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="x6U-2e-Y3w" userLabel="icon"/>
                 </subviews>
             </view>
             <constraints>
@@ -27,7 +27,10 @@
             <connections>
                 <outlet property="iconImageView" destination="x6U-2e-Y3w" id="lbR-jb-tKU"/>
             </connections>
-            <point key="canvasLocation" x="-159" y="-152"/>
+            <point key="canvasLocation" x="-295" y="-302"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
 </document>

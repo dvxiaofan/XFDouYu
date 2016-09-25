@@ -10,8 +10,11 @@ import UIKit
 
 class XFCycleModel: NSObject {
     
+    // 标题
+    var title : String = ""
+    
     // 展示图片的 URL
-    var pid_url: String = ""
+    var pic_url: String = ""
     // 主播信息对应模型字典
     var room: [String: NSObject]? {
         didSet {
