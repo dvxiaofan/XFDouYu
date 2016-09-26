@@ -26,7 +26,7 @@
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="4kr-mf-PdI"/>
-                        <constraint firstAttribute="height" constant="22" id="hDA-Yg-bJc"/>
+                        <constraint firstAttribute="height" constant="18" id="hDA-Yg-bJc"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <state key="normal" title="2.4万" image="Image_online">

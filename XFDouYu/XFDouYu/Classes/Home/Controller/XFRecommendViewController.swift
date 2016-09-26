@@ -56,6 +56,12 @@ class XFRecommendViewController: UIViewController {
         return cycleView
     }()
     
+    fileprivate lazy var gameView: XFRecommendGameView = {
+        let gameView = XFRecommendGameView.recommentGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
+    
     // MARK:- 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +82,9 @@ extension XFRecommendViewController {
         // 2. cycleView 加到 collectionView
         collectionView.addSubview(cycleView)
         
+        // 3. 添加 gameView 到 collectionView
+        collectionView.addSubview(gameView)
+        
         // 设置 collectionview 内边距
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
@@ -88,6 +97,9 @@ extension XFRecommendViewController {
         recommentVM.requestData {
             // 1. 展示推荐数据
             self.collectionView.reloadData()
+            
+            // 2. 显示 game 推荐数据
+            self.gameView.groups = self.recommentVM.anchorGroups
             
         }
         
