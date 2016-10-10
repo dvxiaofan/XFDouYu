@@ -65,6 +65,7 @@ class XFRecommendViewController: UIViewController {
     // MARK:- 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // 设置 UI
         setUpUI()
         

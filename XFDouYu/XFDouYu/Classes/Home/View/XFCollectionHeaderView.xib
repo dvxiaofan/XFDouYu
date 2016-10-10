@@ -71,6 +71,7 @@
             <connections>
                 <outlet property="headerIconView" destination="Xtp-QN-xga" id="rY7-cA-V9E"/>
                 <outlet property="headerNameLabel" destination="VkQ-gL-oDu" id="PVy-fZ-0yZ"/>
+                <outlet property="moreBtn" destination="CGz-yt-4U6" id="tqC-cY-Qrh"/>
             </connections>
             <point key="canvasLocation" x="-134" y="-161"/>
         </collectionReusableView>

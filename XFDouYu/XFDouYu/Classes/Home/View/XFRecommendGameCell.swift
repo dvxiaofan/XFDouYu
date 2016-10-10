@@ -16,11 +16,15 @@ class XFRecommendGameCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     // MARK:- 定义模型属性
-    var group: XFAnchorGroup? {
+    var baseGame: XFBaseGameModel? {
         didSet {
-            nameLabel.text = group?.tag_name
-            let iconURL = URL(string: group?.icon_url ?? "")
-            iconImageView.kf.setImage(with: iconURL, placeholder: UIImage(named: "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
+            nameLabel.text = baseGame?.tag_name
+            
+            if let iconURL = URL(string: baseGame?.icon_url ?? "") {
+                iconImageView.kf.setImage(with: iconURL)
+            } else {
+                iconImageView.image = UIImage(named: "home_more_btn")
+            }
         }
     }
 }

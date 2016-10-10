@@ -12,6 +12,7 @@ class XFCollectionHeaderView: UICollectionReusableView {
     // MARK:- 拖线属性
     @IBOutlet weak var headerIconView: UIImageView!
     @IBOutlet weak var headerNameLabel: UILabel!
+    @IBOutlet weak var moreBtn: UIButton!
     
     // MARK:- 定义模型属性
     var group: XFAnchorGroup? {
