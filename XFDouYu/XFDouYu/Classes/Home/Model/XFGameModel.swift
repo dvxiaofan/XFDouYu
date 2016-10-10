@@ -8,6 +8,6 @@
 
 import UIKit
 
-class XFGameModel: NSObject {
+class XFGameModel: XFBaseGameModel {
 
 }
