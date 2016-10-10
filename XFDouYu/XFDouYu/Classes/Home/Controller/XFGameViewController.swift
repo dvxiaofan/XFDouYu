@@ -20,8 +20,10 @@ private let kHeaderViewID = "kHeaderViewID"
 class XFGameViewController: UIViewController {
     
     // MARK:- 懒加载
-    fileprivate lazy var gameVM: xfg
+    fileprivate lazy var gameVM: XFGameViewModel = XFGameViewModel()
 
+    
+    // MARK:- 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -24,7 +24,7 @@ class XFBaseGameModel: NSObject {
         setValuesForKeys(dict)
     }
     
-    override func setValue(_ value: Any?, forKey key: String) { }
+    override func setValue(_ value: Any?, forUndefinedKey key: String) { }
     
     
 }

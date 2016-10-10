@@ -9,7 +9,23 @@
 import UIKit
 
 class XFGameViewModel {
-//    lazy var games: XFGameViewModel = 
+    var games: [XFGameModel] = [XFGameModel]()
+}
+
+extension XFGameViewModel {
+    func loadAllGameData(finishCallBack: @escaping () -> ()) {
+        XFNetworkTool.requestData(type: .GET, URLString: kHomeGameUrl, parameters: ["shortName" : "game"]) { (result) in
+            
+            guard let resultDict = result as? [String : Any] else { return }
+            guard let dataArray = resultDict["data"] as? [[String : Any]] else { return }
+            
+            for dict in dataArray {
+                self.games.append(XFGameModel(dict: dict))
+            }
+            
+            finishCallBack()
+        }
+    }
 }
 
 
