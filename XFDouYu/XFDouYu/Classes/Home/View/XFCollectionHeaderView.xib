@@ -13,11 +13,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ws-W9-fVk">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="columnYanzhiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-QN-xga" userLabel="headerIcon">
-                            <constraints>
-                                <constraint firstAttribute="width" constant="18" id="awG-Bf-rXO"/>
-                            </constraints>
-                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="columnYanzhiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-QN-xga" userLabel="headerIcon"/>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGz-yt-4U6">
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="f8h-Bm-dn9"/>

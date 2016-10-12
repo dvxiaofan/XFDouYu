@@ -29,7 +29,8 @@ class XFHomeViewController: UIViewController {
         // 2. 确定所有控制器
         var childVcs = [UIViewController]()
         childVcs.append(XFRecommendViewController())
-        for _ in 0..<4 {
+        childVcs.append(XFGameViewController())
+        for _ in 0..<2 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)

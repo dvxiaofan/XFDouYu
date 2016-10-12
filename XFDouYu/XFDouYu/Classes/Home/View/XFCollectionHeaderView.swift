@@ -22,3 +22,19 @@ class XFCollectionHeaderView: UICollectionReusableView {
         }
     }
 }
+
+// MARK:- 从 nib 快速创建 view
+extension XFCollectionHeaderView {
+    class func collectionHeaderView() -> XFCollectionHeaderView {
+        return Bundle.main.loadNibNamed("XFCollectionHeaderView", owner: nil, options: nil)?.first as! XFCollectionHeaderView
+    }
+}
+
+
+
+
+
+
+
+
+

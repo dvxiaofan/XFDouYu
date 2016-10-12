@@ -13,6 +13,7 @@ private let kEdeMargin: CGFloat = 10
 private let kItemW: CGFloat = (kScreenW - 2 * kEdeMargin) / 3
 private let kItemH: CGFloat = kItemW * 6 / 5
 private let kHeaderViewH: CGFloat = 50
+private let kGameViewH: CGFloat = 90
 
 private let kGameCellID = "kGameCellID"
 private let kHeaderViewID = "kHeaderViewID"
@@ -42,6 +43,22 @@ class XFGameViewController: UIViewController {
         return collectionView
     }()
 
+    fileprivate lazy var headerView: XFCollectionHeaderView = {
+        let headerView = XFCollectionHeaderView.collectionHeaderView()
+        headerView.frame = CGRect(x: 0, y: -(kHeaderViewH + kGameViewH), width: kScreenW, height: kHeaderViewH)
+        headerView.headerIconView.image = UIImage(named: "Img_orange")
+        headerView.headerNameLabel.text = "常用"
+        headerView.moreBtn.isHidden = true
+        
+        return headerView
+    }()
+    
+    fileprivate lazy var gameView: XFRecommendGameView = {
+        let gameView = XFRecommendGameView.recommentGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        
+        return gameView
+    }()
     
     // MARK:- 系统回调
     override func viewDidLoad() {
@@ -56,7 +73,14 @@ class XFGameViewController: UIViewController {
 // MARK:- 设置 UI
 extension XFGameViewController {
     fileprivate func setUpUI() {
+        
         view.addSubview(collectionView)
+        
+        collectionView.addSubview(headerView)
+        
+        collectionView.addSubview(gameView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: kHeaderViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -65,6 +89,8 @@ extension XFGameViewController {
     fileprivate func loadData() {
         gameVM.loadAllGameData {
             self.collectionView.reloadData()
+            
+            self.gameView.groups = Array(self.gameVM.games[0..<10])
         }
     }
 }

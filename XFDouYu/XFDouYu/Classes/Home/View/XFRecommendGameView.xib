@@ -36,7 +36,7 @@
             <connections>
                 <outlet property="collectionView" destination="qeA-AW-6Aw" id="TUd-3w-7S4"/>
             </connections>
-            <point key="canvasLocation" x="-241" y="-184"/>
+            <point key="canvasLocation" x="-356" y="-241"/>
         </view>
     </objects>
 </document>

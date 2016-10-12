@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,8 +16,8 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riH-cE-Tjc" userLabel="icon">
                         <constraints>
-                            <constraint firstAttribute="width" constant="45" id="O00-3H-kDJ"/>
-                            <constraint firstAttribute="width" secondItem="riH-cE-Tjc" secondAttribute="height" multiplier="1:1" id="cSR-Nv-ph3"/>
+                            <constraint firstAttribute="height" constant="45" id="xP2-0E-S2M"/>
+                            <constraint firstAttribute="width" constant="45" id="zjS-NQ-NKY"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -32,12 +31,21 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhk-tP-LvE">
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Yun-jz-ZXz"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="riH-cE-Tjc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="BJW-r3-nol"/>
+                <constraint firstItem="Yhk-tP-LvE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2cG-pQ-IEb"/>
+                <constraint firstAttribute="trailing" secondItem="Yhk-tP-LvE" secondAttribute="trailing" id="AK7-1D-fPX"/>
                 <constraint firstItem="NR1-fr-8CQ" firstAttribute="centerX" secondItem="riH-cE-Tjc" secondAttribute="centerX" id="EQo-Wj-1ff"/>
+                <constraint firstItem="Yhk-tP-LvE" firstAttribute="top" secondItem="NR1-fr-8CQ" secondAttribute="bottom" constant="33" id="JSV-il-CTq"/>
                 <constraint firstItem="riH-cE-Tjc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Wij-Eg-OL4"/>
+                <constraint firstItem="riH-cE-Tjc" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="iJp-vM-2ra"/>
                 <constraint firstItem="NR1-fr-8CQ" firstAttribute="top" secondItem="riH-cE-Tjc" secondAttribute="bottom" constant="7" id="vCn-7D-edQ"/>
             </constraints>
             <size key="customSize" width="98" height="91"/>
