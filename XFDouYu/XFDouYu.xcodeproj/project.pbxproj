@@ -29,6 +29,8 @@
 		BD1B98BA1D98223000CF3CDA /* XFCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1B98B81D98223000CF3CDA /* XFCollectionCycleCell.xib */; };
 		BD2D7D4F1DAF4F3F00508A0A /* XFAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D4E1DAF4F3F00508A0A /* XFAmuseViewController.swift */; };
 		BD2D7D511DAF527C00508A0A /* XFAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */; };
+		BD2D7D531DAF73A000508A0A /* XFAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D521DAF739F00508A0A /* XFAmuseMenuView.swift */; };
+		BD2D7D551DAF73D300508A0A /* XFAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7D541DAF73D300508A0A /* XFAmuseMenuView.xib */; };
 		BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C811D95756B002984D0 /* XFRecommendViewController.swift */; };
 		BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C831D957BAC002984D0 /* XFCollectionHeaderView.swift */; };
 		BD717C861D957BAC002984D0 /* XFCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD717C841D957BAC002984D0 /* XFCollectionHeaderView.xib */; };
@@ -81,6 +83,8 @@
 		BD1B98B81D98223000CF3CDA /* XFCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCollectionCycleCell.xib; sourceTree = "<group>"; };
 		BD2D7D4E1DAF4F3F00508A0A /* XFAmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseViewController.swift; sourceTree = "<group>"; };
 		BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseViewModel.swift; sourceTree = "<group>"; };
+		BD2D7D521DAF739F00508A0A /* XFAmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseMenuView.swift; sourceTree = "<group>"; };
+		BD2D7D541DAF73D300508A0A /* XFAmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFAmuseMenuView.xib; sourceTree = "<group>"; };
 		BD717C811D95756B002984D0 /* XFRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendViewController.swift; sourceTree = "<group>"; };
 		BD717C831D957BAC002984D0 /* XFCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCollectionHeaderView.swift; sourceTree = "<group>"; };
 		BD717C841D957BAC002984D0 /* XFCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				BDC15EDA1D98E8850059C336 /* XFRecommendGameView.xib */,
 				BDC15EDC1D98E8BF0059C336 /* XFRecommendGameCell.swift */,
 				BDC15EDD1D98E8BF0059C336 /* XFRecommendGameCell.xib */,
+				BD2D7D521DAF739F00508A0A /* XFAmuseMenuView.swift */,
+				BD2D7D541DAF73D300508A0A /* XFAmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				BD0F889D1D92CEEC002137C4 /* Assets.xcassets in Resources */,
 				BD0F88C11D92D891002137C4 /* XFLive.storyboard in Resources */,
 				BD0F889B1D92CEEC002137C4 /* Main.storyboard in Resources */,
+				BD2D7D551DAF73D300508A0A /* XFAmuseMenuView.xib in Resources */,
 				BDC15EDB1D98E8850059C336 /* XFRecommendGameView.xib in Resources */,
 				BD0F88BD1D92D859002137C4 /* XFHome.storyboard in Resources */,
 				BD0F88C31D92D89C002137C4 /* XFProfile.storyboard in Resources */,
@@ -494,6 +501,7 @@
 				BD0620DD1D9426D20046AAD7 /* UIColor-Extension.swift in Sources */,
 				BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */,
 				BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */,
+				BD2D7D531DAF73A000508A0A /* XFAmuseMenuView.swift in Sources */,
 				BD8913B11DAE2CD000641530 /* XFBaseViewModel.swift in Sources */,
 				BD1B98B41D981EC900CF3CDA /* XFRecommendCycleView.swift in Sources */,
 				BD717C8A1D95802D002984D0 /* XFCollectionNormalCell.swift in Sources */,
