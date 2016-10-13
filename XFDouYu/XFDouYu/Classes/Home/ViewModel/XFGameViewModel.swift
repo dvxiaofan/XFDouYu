@@ -8,12 +8,12 @@
 
 import UIKit
 
-class XFGameViewModel {
+class XFGameViewModel: XFBaseViewModel {
     var games: [XFGameModel] = [XFGameModel]()
 }
 
 extension XFGameViewModel {
-    func loadAllGameData(finishCallBack: @escaping () -> ()) {
+    func loadData(finishCallBack: @escaping () -> ()) {
         XFNetworkTool.requestData(type: .GET, URLString: kHomeGameUrl, parameters: ["shortName" : "game"]) { (result) in
             
             guard let resultDict = result as? [String : Any] else { return }

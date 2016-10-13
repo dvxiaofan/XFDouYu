@@ -87,10 +87,16 @@ extension XFGameViewController {
 // MARK:- 请求数据
 extension XFGameViewController {
     fileprivate func loadData() {
-        gameVM.loadAllGameData {
+        
+        // 给父类中的ViewModel进行赋值
+        
+        
+        // 请求游戏推荐数据
+        gameVM.loadData {
             self.collectionView.reloadData()
             
-            self.gameView.groups = Array(self.gameVM.games[0..<10])
+        // 讲数据传递给 gameView
+        self.gameView.groups = Array(self.gameVM.games[0..<10])
         }
     }
 }

@@ -36,6 +36,8 @@
 		BD717C8E1D958088002984D0 /* XFCollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C8D1D958088002984D0 /* XFCollectionPrettyCell.swift */; };
 		BD717C901D95809C002984D0 /* XFCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD717C8F1D95809C002984D0 /* XFCollectionPrettyCell.xib */; };
 		BD88399D1D93CA1600494760 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */; };
+		BD8913B11DAE2CD000641530 /* XFBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8913B01DAE2CD000641530 /* XFBaseViewModel.swift */; };
+		BD8913B31DAE32C700641530 /* XFBaseAnchorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */; };
 		BDC15ED91D98E86B0059C336 /* XFRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC15ED81D98E86B0059C336 /* XFRecommendGameView.swift */; };
 		BDC15EDB1D98E8850059C336 /* XFRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC15EDA1D98E8850059C336 /* XFRecommendGameView.xib */; };
 		BDC15EDE1D98E8BF0059C336 /* XFRecommendGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC15EDC1D98E8BF0059C336 /* XFRecommendGameCell.swift */; };
@@ -84,6 +86,8 @@
 		BD717C8D1D958088002984D0 /* XFCollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCollectionPrettyCell.swift; sourceTree = "<group>"; };
 		BD717C8F1D95809C002984D0 /* XFCollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCollectionPrettyCell.xib; sourceTree = "<group>"; };
 		BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		BD8913B01DAE2CD000641530 /* XFBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFBaseViewModel.swift; sourceTree = "<group>"; };
+		BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFBaseAnchorVC.swift; sourceTree = "<group>"; };
 		BDC15ED81D98E86B0059C336 /* XFRecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendGameView.swift; sourceTree = "<group>"; };
 		BDC15EDA1D98E8850059C336 /* XFRecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFRecommendGameView.xib; sourceTree = "<group>"; };
 		BDC15EDC1D98E8BF0059C336 /* XFRecommendGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendGameCell.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 		BD0F88B41D92D580002137C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BD8913AF1DAE2CBC00641530 /* ViewModel */,
 				BD0F88B61D92D580002137C4 /* Model */,
 				BD0F88B71D92D580002137C4 /* View */,
 				BD0F88B51D92D580002137C4 /* Controller */,
@@ -245,6 +250,7 @@
 			children = (
 				BD0F88991D92CEEC002137C4 /* Main.storyboard */,
 				BD0F88BA1D92D6A6002137C4 /* XFMainViewController.swift */,
+				BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +307,14 @@
 				BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BD8913AF1DAE2CBC00641530 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8913B01DAE2CD000641530 /* XFBaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CC70884356A8FF8949B6EB17 /* Frameworks */ = {
@@ -469,9 +483,11 @@
 				BD0E5A151DAB1D0300D1CF53 /* XFGameViewModel.swift in Sources */,
 				BD0E5A131DAB1B5200D1CF53 /* XFGameViewController.swift in Sources */,
 				BDEF137F1D964EE900F4DC8E /* XFNetworkTool.swift in Sources */,
+				BD8913B31DAE32C700641530 /* XFBaseAnchorVC.swift in Sources */,
 				BD0620DD1D9426D20046AAD7 /* UIColor-Extension.swift in Sources */,
 				BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */,
 				BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */,
+				BD8913B11DAE2CD000641530 /* XFBaseViewModel.swift in Sources */,
 				BD1B98B41D981EC900CF3CDA /* XFRecommendCycleView.swift in Sources */,
 				BD717C8A1D95802D002984D0 /* XFCollectionNormalCell.swift in Sources */,
 				BDEF13811D965A6500F4DC8E /* XFRecommendViewModel.swift in Sources */,

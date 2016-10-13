@@ -100,7 +100,15 @@ extension XFRecommendViewController {
             self.collectionView.reloadData()
             
             // 2. 显示 game 推荐数据
-            self.gameView.groups = self.recommentVM.anchorGroups
+            var groups = self.recommentVM.anchorGroups
+            // 2.1 移除前两组数据
+            groups.removeFirst()
+            groups.removeFirst()
+            // 2.2 添加更多租
+            let moreGroup = XFAnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+            self.gameView.groups = groups
             
         }
         

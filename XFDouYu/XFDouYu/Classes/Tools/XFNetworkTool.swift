@@ -16,7 +16,7 @@ enum MethodType {
 }
 
 class XFNetworkTool {
-    class func requestData(type: MethodType, URLString: String, parameters: [String : String]? = nil, finishedCallBack: @escaping (_ result: AnyObject) -> ()) {
+    class func requestData(type: MethodType, URLString: String, parameters: [String : Any]? = nil, finishedCallBack: @escaping (_ result: AnyObject) -> ()) {
         // 1. 获取请求类型
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
         
