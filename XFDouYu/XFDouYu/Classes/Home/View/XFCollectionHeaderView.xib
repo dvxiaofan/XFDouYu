@@ -8,12 +8,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="XFCollectionHeaderView" customModule="XFDouYu" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="354" height="38"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ws-W9-fVk">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="columnYanzhiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-QN-xga" userLabel="headerIcon"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="columnYanzhiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-QN-xga" userLabel="headerIcon"/>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGz-yt-4U6">
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="f8h-Bm-dn9"/>
@@ -45,12 +45,11 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Xtp-QN-xga" firstAttribute="top" secondItem="BqS-Tc-XVT" secondAttribute="bottom" constant="8" id="1oS-tJ-0gW"/>
+                        <constraint firstAttribute="bottom" secondItem="Xtp-QN-xga" secondAttribute="bottom" constant="5" id="9VJ-e0-7Dd"/>
                         <constraint firstItem="BqS-Tc-XVT" firstAttribute="leading" secondItem="9ws-W9-fVk" secondAttribute="leading" id="9yo-MV-a6Q"/>
                         <constraint firstItem="BqS-Tc-XVT" firstAttribute="top" secondItem="9ws-W9-fVk" secondAttribute="top" id="AgF-kq-UAL"/>
                         <constraint firstItem="Xtp-QN-xga" firstAttribute="leading" secondItem="9ws-W9-fVk" secondAttribute="leading" constant="10" id="Cf2-wX-X1v"/>
                         <constraint firstItem="VkQ-gL-oDu" firstAttribute="centerY" secondItem="Xtp-QN-xga" secondAttribute="centerY" id="VCb-QK-3pP"/>
-                        <constraint firstAttribute="bottom" secondItem="CGz-yt-4U6" secondAttribute="bottom" constant="5" id="jQa-47-ySK"/>
                         <constraint firstAttribute="trailing" secondItem="BqS-Tc-XVT" secondAttribute="trailing" id="o7o-ZI-CT5"/>
                         <constraint firstAttribute="trailing" secondItem="CGz-yt-4U6" secondAttribute="trailing" constant="5" id="q2L-dx-UCZ"/>
                         <constraint firstItem="VkQ-gL-oDu" firstAttribute="leading" secondItem="Xtp-QN-xga" secondAttribute="trailing" constant="5" id="tt9-zU-Upk"/>
@@ -69,7 +68,7 @@
                 <outlet property="headerNameLabel" destination="VkQ-gL-oDu" id="PVy-fZ-0yZ"/>
                 <outlet property="moreBtn" destination="CGz-yt-4U6" id="tqC-cY-Qrh"/>
             </connections>
-            <point key="canvasLocation" x="-134" y="-161"/>
+            <point key="canvasLocation" x="-180" y="-210"/>
         </collectionReusableView>
     </objects>
     <resources>

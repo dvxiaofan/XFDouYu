@@ -8,11 +8,9 @@
 
 import UIKit
 
-class XFRecommendViewModel {
+class XFRecommendViewModel: XFBaseViewModel {
     // MARK:- 懒加载属性
-    lazy var anchorGroups: [XFAnchorGroup] = [XFAnchorGroup]()
     lazy var cycleModel: [XFCycleModel] = [XFCycleModel]()
-    
     fileprivate lazy var bigDataGroup: XFAnchorGroup = XFAnchorGroup()
     fileprivate lazy var pertyDataGroup: XFAnchorGroup = XFAnchorGroup()
 }
@@ -79,20 +77,7 @@ extension XFRecommendViewModel {
         // 5. 请求2-12部分游戏数据
         disGroup.enter()
         
-        XFNetworkTool.requestData(type: .GET, URLString: KHomeRecOtheUrl, parameters: parameters) { (result) in
-            
-            // 1. 将result 转成字典模型
-            guard let resultDic = result as? [String: NSObject] else { return }
-            
-            // 2.根据daga 该key, 获取数组
-            guard let dataArray = resultDic["data"] as? [[String: NSObject]] else { return }
-            
-            // 3. 遍历字典, 并转成模型对象
-            for dict in dataArray {
-                let group = XFAnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-            }
-            
+        loadAnchorData(URLString: KHomeRecOtheUrl, parameters: parameters) { 
             disGroup.leave()
         }
         

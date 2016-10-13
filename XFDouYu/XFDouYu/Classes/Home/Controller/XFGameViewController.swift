@@ -12,7 +12,7 @@ import UIKit
 private let kEdeMargin: CGFloat = 10
 private let kItemW: CGFloat = (kScreenW - 2 * kEdeMargin) / 3
 private let kItemH: CGFloat = kItemW * 6 / 5
-private let kHeaderViewH: CGFloat = 50
+private let kHeaderViewH: CGFloat = 40
 private let kGameViewH: CGFloat = 90
 
 private let kGameCellID = "kGameCellID"

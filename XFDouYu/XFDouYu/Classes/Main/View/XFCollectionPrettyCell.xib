@@ -42,7 +42,7 @@
                         <constraint firstAttribute="height" constant="18" id="gZU-0O-1gu"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu5-wk-Mut" userLabel="online">
+                <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu5-wk-Mut" userLabel="online">
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="1zH-Jp-ndq"/>
@@ -63,12 +63,12 @@
                 <constraint firstItem="hu5-wk-Mut" firstAttribute="trailing" secondItem="SdJ-Z8-F4W" secondAttribute="trailing" constant="-5" id="UEU-lc-0cb"/>
                 <constraint firstItem="U4k-3h-GbL" firstAttribute="leading" secondItem="5Iq-Tm-1Zh" secondAttribute="trailing" constant="2" id="cQi-kh-MOR"/>
                 <constraint firstItem="Mub-jf-Cli" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="bottom" constant="8" id="cde-vx-BEO"/>
-                <constraint firstItem="SdJ-Z8-F4W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="cfJ-mF-uBN"/>
+                <constraint firstItem="SdJ-Z8-F4W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cfJ-mF-uBN"/>
                 <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="centerY" secondItem="U4k-3h-GbL" secondAttribute="centerY" id="d5i-Io-w5z"/>
                 <constraint firstAttribute="bottom" secondItem="U4k-3h-GbL" secondAttribute="bottom" constant="5" id="kXE-0i-TeZ"/>
                 <constraint firstAttribute="trailing" secondItem="Mub-jf-Cli" secondAttribute="trailing" id="utj-Ar-RPQ"/>
                 <constraint firstItem="5Iq-Tm-1Zh" firstAttribute="leading" secondItem="SdJ-Z8-F4W" secondAttribute="leading" id="xde-ie-6Vq"/>
-                <constraint firstItem="hu5-wk-Mut" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="top" constant="5" id="zqF-gN-Hf0"/>
+                <constraint firstItem="hu5-wk-Mut" firstAttribute="top" secondItem="SdJ-Z8-F4W" secondAttribute="top" id="zqF-gN-Hf0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -27,6 +27,8 @@
 		BD1B98B61D981ED400CF3CDA /* XFRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1B98B51D981ED400CF3CDA /* XFRecommendCycleView.xib */; };
 		BD1B98B91D98223000CF3CDA /* XFCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1B98B71D98223000CF3CDA /* XFCollectionCycleCell.swift */; };
 		BD1B98BA1D98223000CF3CDA /* XFCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1B98B81D98223000CF3CDA /* XFCollectionCycleCell.xib */; };
+		BD2D7D4F1DAF4F3F00508A0A /* XFAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D4E1DAF4F3F00508A0A /* XFAmuseViewController.swift */; };
+		BD2D7D511DAF527C00508A0A /* XFAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */; };
 		BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C811D95756B002984D0 /* XFRecommendViewController.swift */; };
 		BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C831D957BAC002984D0 /* XFCollectionHeaderView.swift */; };
 		BD717C861D957BAC002984D0 /* XFCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD717C841D957BAC002984D0 /* XFCollectionHeaderView.xib */; };
@@ -77,6 +79,8 @@
 		BD1B98B51D981ED400CF3CDA /* XFRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFRecommendCycleView.xib; sourceTree = "<group>"; };
 		BD1B98B71D98223000CF3CDA /* XFCollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCollectionCycleCell.swift; sourceTree = "<group>"; };
 		BD1B98B81D98223000CF3CDA /* XFCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCollectionCycleCell.xib; sourceTree = "<group>"; };
+		BD2D7D4E1DAF4F3F00508A0A /* XFAmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseViewController.swift; sourceTree = "<group>"; };
+		BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseViewModel.swift; sourceTree = "<group>"; };
 		BD717C811D95756B002984D0 /* XFRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendViewController.swift; sourceTree = "<group>"; };
 		BD717C831D957BAC002984D0 /* XFCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCollectionHeaderView.swift; sourceTree = "<group>"; };
 		BD717C841D957BAC002984D0 /* XFCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				BD0F88C61D92DF49002137C4 /* XFHomeViewController.swift */,
 				BD717C811D95756B002984D0 /* XFRecommendViewController.swift */,
 				BD0E5A121DAB1B5200D1CF53 /* XFGameViewController.swift */,
+				BD2D7D4E1DAF4F3F00508A0A /* XFAmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			children = (
 				BDEF13801D965A6500F4DC8E /* XFRecommendViewModel.swift */,
 				BD0E5A141DAB1D0300D1CF53 /* XFGameViewModel.swift */,
+				BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				BD0E5A191DAB1E5300D1CF53 /* XFBaseGameModel.swift in Sources */,
 				BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */,
 				BD717C8E1D958088002984D0 /* XFCollectionPrettyCell.swift in Sources */,
+				BD2D7D4F1DAF4F3F00508A0A /* XFAmuseViewController.swift in Sources */,
 				BDEF13851D965B0200F4DC8E /* XFAnchorModel.swift in Sources */,
 				BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */,
 				BD1B98B91D98223000CF3CDA /* XFCollectionCycleCell.swift in Sources */,
@@ -490,6 +497,7 @@
 				BD8913B11DAE2CD000641530 /* XFBaseViewModel.swift in Sources */,
 				BD1B98B41D981EC900CF3CDA /* XFRecommendCycleView.swift in Sources */,
 				BD717C8A1D95802D002984D0 /* XFCollectionNormalCell.swift in Sources */,
+				BD2D7D511DAF527C00508A0A /* XFAmuseViewModel.swift in Sources */,
 				BDEF13811D965A6500F4DC8E /* XFRecommendViewModel.swift in Sources */,
 				BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */,
 				BD0E5A171DAB1DD200D1CF53 /* XFGameModel.swift in Sources */,

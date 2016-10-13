@@ -30,7 +30,9 @@ class XFHomeViewController: UIViewController {
         var childVcs = [UIViewController]()
         childVcs.append(XFRecommendViewController())
         childVcs.append(XFGameViewController())
-        for _ in 0..<2 {
+        childVcs.append(XFAmuseViewController())
+        
+        for _ in 0..<1 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.xf_randomColor()
             childVcs.append(vc)
