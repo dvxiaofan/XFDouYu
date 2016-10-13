@@ -18,7 +18,7 @@ class XFAmuseViewController: XFBaseAnchorVC {
         let menuView = XFAmuseMenuView.amuseMenuView()
         menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: kScreenW, height: kMenuViewH)
         
-        menuView.backgroundColor = UIColor.orange
+        
         
         return menuView
     }()

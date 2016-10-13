@@ -31,6 +31,8 @@
 		BD2D7D511DAF527C00508A0A /* XFAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */; };
 		BD2D7D531DAF73A000508A0A /* XFAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D521DAF739F00508A0A /* XFAmuseMenuView.swift */; };
 		BD2D7D551DAF73D300508A0A /* XFAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7D541DAF73D300508A0A /* XFAmuseMenuView.xib */; };
+		BD2D7D581DAF850700508A0A /* XFAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7D561DAF850700508A0A /* XFAmuseMenuViewCell.swift */; };
+		BD2D7D591DAF850700508A0A /* XFAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7D571DAF850700508A0A /* XFAmuseMenuViewCell.xib */; };
 		BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C811D95756B002984D0 /* XFRecommendViewController.swift */; };
 		BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD717C831D957BAC002984D0 /* XFCollectionHeaderView.swift */; };
 		BD717C861D957BAC002984D0 /* XFCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD717C841D957BAC002984D0 /* XFCollectionHeaderView.xib */; };
@@ -85,6 +87,8 @@
 		BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseViewModel.swift; sourceTree = "<group>"; };
 		BD2D7D521DAF739F00508A0A /* XFAmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseMenuView.swift; sourceTree = "<group>"; };
 		BD2D7D541DAF73D300508A0A /* XFAmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFAmuseMenuView.xib; sourceTree = "<group>"; };
+		BD2D7D561DAF850700508A0A /* XFAmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAmuseMenuViewCell.swift; sourceTree = "<group>"; };
+		BD2D7D571DAF850700508A0A /* XFAmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		BD717C811D95756B002984D0 /* XFRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendViewController.swift; sourceTree = "<group>"; };
 		BD717C831D957BAC002984D0 /* XFCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCollectionHeaderView.swift; sourceTree = "<group>"; };
 		BD717C841D957BAC002984D0 /* XFCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				BDC15EDD1D98E8BF0059C336 /* XFRecommendGameCell.xib */,
 				BD2D7D521DAF739F00508A0A /* XFAmuseMenuView.swift */,
 				BD2D7D541DAF73D300508A0A /* XFAmuseMenuView.xib */,
+				BD2D7D561DAF850700508A0A /* XFAmuseMenuViewCell.swift */,
+				BD2D7D571DAF850700508A0A /* XFAmuseMenuViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				BD1B98BA1D98223000CF3CDA /* XFCollectionCycleCell.xib in Resources */,
 				BD717C901D95809C002984D0 /* XFCollectionPrettyCell.xib in Resources */,
 				BD0F889D1D92CEEC002137C4 /* Assets.xcassets in Resources */,
+				BD2D7D591DAF850700508A0A /* XFAmuseMenuViewCell.xib in Resources */,
 				BD0F88C11D92D891002137C4 /* XFLive.storyboard in Resources */,
 				BD0F889B1D92CEEC002137C4 /* Main.storyboard in Resources */,
 				BD2D7D551DAF73D300508A0A /* XFAmuseMenuView.xib in Resources */,
@@ -493,6 +500,7 @@
 				BDEF13831D965AF100F4DC8E /* XFAnchorGroup.swift in Sources */,
 				BDC15ED91D98E86B0059C336 /* XFRecommendGameView.swift in Sources */,
 				BDE1AE2A1D93E014006CC5C7 /* XFPageTitleView.swift in Sources */,
+				BD2D7D581DAF850700508A0A /* XFAmuseMenuViewCell.swift in Sources */,
 				BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */,
 				BD0E5A151DAB1D0300D1CF53 /* XFGameViewModel.swift in Sources */,
 				BD0E5A131DAB1B5200D1CF53 /* XFGameViewController.swift in Sources */,

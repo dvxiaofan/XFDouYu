@@ -1,5 +1,5 @@
 //
-//  XFAmuseMenuView.swift
+//  XFAmuseMenuViewCell.swift
 //  XFDouYu
 //
 //  Created by xiaofans on 16/10/13.
@@ -8,56 +8,46 @@
 
 import UIKit
 
-private let kMenuCellID = "XFAmuseMenuViewCell"
+// MARK:- 常量
+private let kGameCellID = "kGameCellID"
 
-class XFAmuseMenuView: UIView {
+class XFAmuseMenuViewCell: UICollectionViewCell {
+
     // MARK:- 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
     
-    // MARK:- 从 nib 加载
+    // MARK:- 从 xib 加载
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        collectionView.register(UINib(nibName: "XFAmuseMenuViewCell", bundle: nil), forCellWithReuseIdentifier: kMenuCellID)
+        collectionView.register(UINib(nibName: "XFRecommendGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
     }
     
-    // MARK:- 设置 layout
+    // MARK:- layout
     override func layoutSubviews() {
         super.layoutSubviews()
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = collectionView.bounds.size
+        let itemW = collectionView.bounds.width / 4
+        let itemH = collectionView.bounds.height / 2
+        layout.itemSize = CGSize(width: itemW, height: itemH)
     }
+
 }
 
-extension XFAmuseMenuView {
-    class func amuseMenuView() -> XFAmuseMenuView {
-        return Bundle.main.loadNibNamed("XFAmuseMenuView", owner: nil, options: nil)?.first as! XFAmuseMenuView
-    }
-}
-
-extension XFAmuseMenuView: UICollectionViewDataSource {
-    
+extension XFAmuseMenuViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kMenuCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
         
         cell.backgroundColor = UIColor.xf_randomColor()
         
         return cell
     }
 }
-
-
-
-
-
-
-
 
 
 
