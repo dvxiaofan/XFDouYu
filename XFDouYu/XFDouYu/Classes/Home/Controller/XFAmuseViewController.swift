@@ -18,8 +18,6 @@ class XFAmuseViewController: XFBaseAnchorVC {
         let menuView = XFAmuseMenuView.amuseMenuView()
         menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: kScreenW, height: kMenuViewH)
         
-        
-        
         return menuView
     }()
 }
@@ -44,6 +42,11 @@ extension XFAmuseViewController {
         // 请求数据
         amuseVM.loadAmuseData {
             self.collectionView.reloadData()
+            
+            var tempGroups = self.amuseVM.anchorGroups
+            tempGroups.removeFirst()
+            
+            self.menuView.groups = tempGroups
         }
     }
 }

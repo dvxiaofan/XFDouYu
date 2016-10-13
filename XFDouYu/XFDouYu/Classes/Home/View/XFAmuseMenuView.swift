@@ -11,6 +11,15 @@ import UIKit
 private let kMenuCellID = "XFAmuseMenuViewCell"
 
 class XFAmuseMenuView: UIView {
+    
+    // MARK:- 定义属性
+    var groups: [XFAnchorGroup]? {
+        didSet {
+            // 一旦拿到新数据就刷新
+            collectionView.reloadData()
+        }
+    }
+    
     // MARK:- 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -40,18 +49,40 @@ extension XFAmuseMenuView {
 extension XFAmuseMenuView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        if groups == nil { return 0}
+        let pageNum = (groups!.count - 1) / 8 + 1
+        pageControl.numberOfPages = pageNum
+        return pageNum
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kMenuCellID, for: indexPath)
-        
-        cell.backgroundColor = UIColor.xf_randomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kMenuCellID, for: indexPath) as! XFAmuseMenuViewCell
+        // 赋值给 cell
+        setUpCellDataWithCell(cell: cell, indexPath: indexPath)
         
         return cell
     }
+    
+    private func setUpCellDataWithCell(cell: XFAmuseMenuViewCell, indexPath: IndexPath) {
+        
+        let startIndex = indexPath.item * 8
+        var endIndex = (indexPath.item + 1) * 8 - 1
+        
+        // 判断越界问题
+        if endIndex > groups!.count - 1 {
+            endIndex = groups!.count - 1
+        }
+        
+        // 取出数据, 赋值给 cell
+        cell.groups = Array(groups![startIndex...endIndex])
+    }
 }
 
+extension XFAmuseMenuView: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+    }
+}
 
 
 

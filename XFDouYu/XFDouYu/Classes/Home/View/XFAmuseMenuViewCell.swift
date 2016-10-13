@@ -12,6 +12,13 @@ import UIKit
 private let kGameCellID = "kGameCellID"
 
 class XFAmuseMenuViewCell: UICollectionViewCell {
+    
+    var groups: [XFAnchorGroup]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
 
     // MARK:- 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
@@ -35,15 +42,16 @@ class XFAmuseMenuViewCell: UICollectionViewCell {
 
 }
 
+// MARK:- UICollectionViewDataSource
 extension XFAmuseMenuViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return groups?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! XFRecommendGameCell
+        cell.baseGame = groups![indexPath.item]
         
-        cell.backgroundColor = UIColor.xf_randomColor()
         
         return cell
     }
