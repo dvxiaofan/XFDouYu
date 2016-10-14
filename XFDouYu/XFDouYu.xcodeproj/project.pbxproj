@@ -44,6 +44,8 @@
 		BD88399D1D93CA1600494760 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */; };
 		BD8913B11DAE2CD000641530 /* XFBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8913B01DAE2CD000641530 /* XFBaseViewModel.swift */; };
 		BD8913B31DAE32C700641530 /* XFBaseAnchorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */; };
+		BD93A9201DB11E1F0039E2A6 /* XFFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93A91F1DB11E1F0039E2A6 /* XFFunnyViewController.swift */; };
+		BD93A9221DB120020039E2A6 /* XFFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93A9211DB120020039E2A6 /* XFFunnyViewModel.swift */; };
 		BDC15ED91D98E86B0059C336 /* XFRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC15ED81D98E86B0059C336 /* XFRecommendGameView.swift */; };
 		BDC15EDB1D98E8850059C336 /* XFRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC15EDA1D98E8850059C336 /* XFRecommendGameView.xib */; };
 		BDC15EDE1D98E8BF0059C336 /* XFRecommendGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC15EDC1D98E8BF0059C336 /* XFRecommendGameCell.swift */; };
@@ -100,6 +102,8 @@
 		BD88399C1D93CA1500494760 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		BD8913B01DAE2CD000641530 /* XFBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFBaseViewModel.swift; sourceTree = "<group>"; };
 		BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFBaseAnchorVC.swift; sourceTree = "<group>"; };
+		BD93A91F1DB11E1F0039E2A6 /* XFFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFFunnyViewController.swift; sourceTree = "<group>"; };
+		BD93A9211DB120020039E2A6 /* XFFunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFFunnyViewModel.swift; sourceTree = "<group>"; };
 		BDC15ED81D98E86B0059C336 /* XFRecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendGameView.swift; sourceTree = "<group>"; };
 		BDC15EDA1D98E8850059C336 /* XFRecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFRecommendGameView.xib; sourceTree = "<group>"; };
 		BDC15EDC1D98E8BF0059C336 /* XFRecommendGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRecommendGameCell.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				BD717C811D95756B002984D0 /* XFRecommendViewController.swift */,
 				BD0E5A121DAB1B5200D1CF53 /* XFGameViewController.swift */,
 				BD2D7D4E1DAF4F3F00508A0A /* XFAmuseViewController.swift */,
+				BD93A91F1DB11E1F0039E2A6 /* XFFunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				BDEF13801D965A6500F4DC8E /* XFRecommendViewModel.swift */,
 				BD0E5A141DAB1D0300D1CF53 /* XFGameViewModel.swift */,
 				BD2D7D501DAF527C00508A0A /* XFAmuseViewModel.swift */,
+				BD93A9211DB120020039E2A6 /* XFFunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 				BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */,
 				BD717C8E1D958088002984D0 /* XFCollectionPrettyCell.swift in Sources */,
 				BD2D7D4F1DAF4F3F00508A0A /* XFAmuseViewController.swift in Sources */,
+				BD93A9201DB11E1F0039E2A6 /* XFFunnyViewController.swift in Sources */,
 				BDEF13851D965B0200F4DC8E /* XFAnchorModel.swift in Sources */,
 				BDE1AE2C1D93E2BD006CC5C7 /* XFDefineFile.swift in Sources */,
 				BD1B98B91D98223000CF3CDA /* XFCollectionCycleCell.swift in Sources */,
@@ -515,6 +522,7 @@
 				BD717C8A1D95802D002984D0 /* XFCollectionNormalCell.swift in Sources */,
 				BD2D7D511DAF527C00508A0A /* XFAmuseViewModel.swift in Sources */,
 				BDEF13811D965A6500F4DC8E /* XFRecommendViewModel.swift in Sources */,
+				BD93A9221DB120020039E2A6 /* XFFunnyViewModel.swift in Sources */,
 				BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */,
 				BD0E5A171DAB1DD200D1CF53 /* XFGameModel.swift in Sources */,
 				BD0F88961D92CEEC002137C4 /* AppDelegate.swift in Sources */,

@@ -77,7 +77,7 @@ extension XFRecommendViewModel {
         // 5. 请求2-12部分游戏数据
         disGroup.enter()
         
-        loadAnchorData(URLString: KHomeRecOtheUrl, parameters: parameters) { 
+        loadAnchorData(isGroupData: true, URLString: KHomeRecOtheUrl, parameters: parameters) {
             disGroup.leave()
         }
         

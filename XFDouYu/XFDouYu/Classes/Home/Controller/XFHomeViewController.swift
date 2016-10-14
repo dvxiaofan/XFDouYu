@@ -31,12 +31,7 @@ class XFHomeViewController: UIViewController {
         childVcs.append(XFRecommendViewController())
         childVcs.append(XFGameViewController())
         childVcs.append(XFAmuseViewController())
-        
-        for _ in 0..<1 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.xf_randomColor()
-            childVcs.append(vc)
-        }
+        childVcs.append(XFFunnyViewController())
         
         let contentView = XFPageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
         contentView.delegate = self

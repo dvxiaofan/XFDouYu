@@ -19,3 +19,5 @@ let kHomeRecCycleUrl = "http://capi.douyucdn.cn/api/v1/slide/6"
 let kHomeGameUrl     = "http://capi.douyucdn.cn/api/v1/getColumnDetail"
 
 let kHomeAmuseUrl    = "http://capi.douyucdn.cn/api/v1/getHotRoom/2"
+
+let kHomeFunnyUrl    = "http://capi.douyucdn.cn/api/v1/getColumnRoom/3"

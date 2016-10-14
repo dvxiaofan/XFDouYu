@@ -22,7 +22,7 @@ class XFAnchorModel: NSObject {
     var online: Float = 0
     var anchor_city: String = ""
     
-    init(dict: [String: NSObject]) {
+    init(dict: [String: Any]) {
         super.init()
         
         setValuesForKeys(dict)

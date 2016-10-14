@@ -14,7 +14,7 @@ class XFAmuseViewModel: XFBaseViewModel {
 
 extension XFAmuseViewModel {
     func loadAmuseData(finishedCallBack: @escaping () -> ()) {
-        loadAnchorData(URLString: kHomeAmuseUrl, finishedCallBack: finishedCallBack)
+        loadAnchorData(isGroupData: true, URLString: kHomeAmuseUrl, finishedCallBack: finishedCallBack)
     }
 }
 
