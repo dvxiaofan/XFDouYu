@@ -21,10 +21,12 @@ class XFRoomNormalVC: UIViewController, UIGestureRecognizerDelegate {
         
         // 隐藏导航栏
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        // 保持返回手势
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 
