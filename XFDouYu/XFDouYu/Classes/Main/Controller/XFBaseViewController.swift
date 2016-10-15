@@ -44,7 +44,16 @@ extension XFBaseViewController {
         
         view.backgroundColor = UIColor(r: 250, g: 250, b: 250)
     }
+    
+    func loadDataFinished() {
+        animImageView.stopAnimating()
+        
+        animImageView.isHidden = true
+        
+        contentView?.isHidden = false
+    }
 }
+
 
 
 

@@ -99,8 +99,11 @@ extension XFGameViewController {
         gameVM.loadData {
             self.collectionView.reloadData()
             
-        // 讲数据传递给 gameView
-        self.gameView.groups = Array(self.gameVM.games[0..<10])
+            // 讲数据传递给 gameView
+            self.gameView.groups = Array(self.gameVM.games[0..<10])
+            
+            // 数据请求完成, 隐藏动画界面
+            self.loadDataFinished()
         }
     }
 }

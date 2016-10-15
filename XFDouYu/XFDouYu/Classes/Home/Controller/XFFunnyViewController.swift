@@ -31,6 +31,9 @@ extension XFFunnyViewController {
         
         funnyVM.loadFunnyData {
             self.collectionView.reloadData()
+            
+            // 数据请求完成, 隐藏动画界面
+            self.loadDataFinished()
         }
     }
 }

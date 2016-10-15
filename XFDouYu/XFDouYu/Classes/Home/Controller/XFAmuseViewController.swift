@@ -47,6 +47,9 @@ extension XFAmuseViewController {
             tempGroups.removeFirst()
             
             self.menuView.groups = tempGroups
+            
+            // 数据请求完成, 隐藏动画界面
+            self.loadDataFinished()
         }
     }
 }

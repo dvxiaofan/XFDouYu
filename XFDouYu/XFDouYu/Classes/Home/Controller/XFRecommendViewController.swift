@@ -70,6 +70,9 @@ extension XFRecommendViewController {
             moreGroup.tag_name = "更多"
             groups.append(moreGroup)
             self.gameView.groups = groups
+            
+            // 3. 数据请求完成, 隐藏动画界面
+            self.loadDataFinished()
         }
         
         // 请求轮播数据
