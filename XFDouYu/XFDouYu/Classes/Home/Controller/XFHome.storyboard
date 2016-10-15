@@ -8,7 +8,7 @@
         <!--首页-->
         <scene sceneID="PXE-ks-wIe">
             <objects>
-                <navigationController id="RFO-Ts-HaJ" sceneMemberID="viewController">
+                <navigationController id="RFO-Ts-HaJ" customClass="XFCustomNaviController" customModule="XFDouYu" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabHome" selectedImage="tabHomeHL" id="jCv-tR-qV0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="13m-om-4pd">

@@ -77,8 +77,8 @@ extension XFBaseAnchorVC {
     }
 }
 
-// MARK:- UICollectionViewDataSource UICollectionViewDelegate
-extension XFBaseAnchorVC: UICollectionViewDataSource, UICollectionViewDelegate {
+// MARK:- UICollectionViewDataSource
+extension XFBaseAnchorVC: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return baseVM.anchorGroups.count
     }
@@ -100,6 +100,27 @@ extension XFBaseAnchorVC: UICollectionViewDataSource, UICollectionViewDelegate {
         headerView.group = baseVM.anchorGroups[indexPath.section]
         
         return headerView
+    }
+}
+
+// MARK:- UICollectionViewDelegate
+extension XFBaseAnchorVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 1. 取出主播信息
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        // 2. 判断是秀场还是电脑
+        anchor.isVertical == 0 ? pushNormalRoomVc() : presentShowRoomVc()
+    }
+    
+    private func presentShowRoomVc() {
+        let showRoomVc = XFRoomShowVC()
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomVc() {
+        let normalRoomVc = XFRoomNormalVC()
+        navigationController?.pushViewController(normalRoomVc, animated: true)
     }
 }
 

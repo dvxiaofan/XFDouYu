@@ -60,6 +60,9 @@
 		BDEF13871D965B4700F4DC8E /* XFCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */; };
 		BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */; };
 		BDFF78151DB218E900B7C854 /* XFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF78141DB218E800B7C854 /* XFBaseViewController.swift */; };
+		BDFF781B1DB228B900B7C854 /* XFRoomShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF781A1DB228B900B7C854 /* XFRoomShowVC.swift */; };
+		BDFF781D1DB228EA00B7C854 /* XFRoomNormalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF781C1DB228EA00B7C854 /* XFRoomNormalVC.swift */; };
+		BDFF781F1DB22C0700B7C854 /* XFCustomNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF781E1DB22C0700B7C854 /* XFCustomNaviController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +122,9 @@
 		BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCycleModel.swift; sourceTree = "<group>"; };
 		BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		BDFF78141DB218E800B7C854 /* XFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFBaseViewController.swift; sourceTree = "<group>"; };
+		BDFF781A1DB228B900B7C854 /* XFRoomShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRoomShowVC.swift; sourceTree = "<group>"; };
+		BDFF781C1DB228EA00B7C854 /* XFRoomNormalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFRoomNormalVC.swift; sourceTree = "<group>"; };
+		BDFF781E1DB22C0700B7C854 /* XFCustomNaviController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCustomNaviController.swift; sourceTree = "<group>"; };
 		D727A2AEDEF7CECA588EE1E7 /* Pods_XFDouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XFDouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0F88B41D92D580002137C4 /* Main */,
+				BDFF78161DB2285900B7C854 /* Room */,
 				BD0F88AE1D92D580002137C4 /* Home(首页) */,
 				BD0F88B31D92D580002137C4 /* Live(直播) */,
 				BD0F88AA1D92D580002137C4 /* Follow(关注) */,
@@ -278,6 +285,7 @@
 				BD0F88BA1D92D6A6002137C4 /* XFMainViewController.swift */,
 				BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */,
 				BDFF78141DB218E800B7C854 /* XFBaseViewController.swift */,
+				BDFF781E1DB22C0700B7C854 /* XFCustomNaviController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +350,39 @@
 				BD8913B01DAE2CD000641530 /* XFBaseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BDFF78161DB2285900B7C854 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF78181DB2285900B7C854 /* Model */,
+				BDFF78191DB2285900B7C854 /* View */,
+				BDFF78171DB2285900B7C854 /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		BDFF78171DB2285900B7C854 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF781A1DB228B900B7C854 /* XFRoomShowVC.swift */,
+				BDFF781C1DB228EA00B7C854 /* XFRoomNormalVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDFF78181DB2285900B7C854 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDFF78191DB2285900B7C854 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CC70884356A8FF8949B6EB17 /* Frameworks */ = {
@@ -500,6 +541,7 @@
 			files = (
 				BD0E5A191DAB1E5300D1CF53 /* XFBaseGameModel.swift in Sources */,
 				BDE1AE2E1D93E2D3006CC5C7 /* XFCommon.swift in Sources */,
+				BDFF781F1DB22C0700B7C854 /* XFCustomNaviController.swift in Sources */,
 				BD717C8E1D958088002984D0 /* XFCollectionPrettyCell.swift in Sources */,
 				BD2D7D4F1DAF4F3F00508A0A /* XFAmuseViewController.swift in Sources */,
 				BD93A9201DB11E1F0039E2A6 /* XFFunnyViewController.swift in Sources */,
@@ -517,6 +559,7 @@
 				BDFF78151DB218E900B7C854 /* XFBaseViewController.swift in Sources */,
 				BDEF137F1D964EE900F4DC8E /* XFNetworkTool.swift in Sources */,
 				BD8913B31DAE32C700641530 /* XFBaseAnchorVC.swift in Sources */,
+				BDFF781D1DB228EA00B7C854 /* XFRoomNormalVC.swift in Sources */,
 				BD0620DD1D9426D20046AAD7 /* UIColor-Extension.swift in Sources */,
 				BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */,
 				BD0F88C71D92DF49002137C4 /* XFHomeViewController.swift in Sources */,
@@ -526,6 +569,7 @@
 				BD717C8A1D95802D002984D0 /* XFCollectionNormalCell.swift in Sources */,
 				BD2D7D511DAF527C00508A0A /* XFAmuseViewModel.swift in Sources */,
 				BDEF13811D965A6500F4DC8E /* XFRecommendViewModel.swift in Sources */,
+				BDFF781B1DB228B900B7C854 /* XFRoomShowVC.swift in Sources */,
 				BD93A9221DB120020039E2A6 /* XFFunnyViewModel.swift in Sources */,
 				BD717C851D957BAC002984D0 /* XFCollectionHeaderView.swift in Sources */,
 				BD0E5A171DAB1DD200D1CF53 /* XFGameModel.swift in Sources */,
