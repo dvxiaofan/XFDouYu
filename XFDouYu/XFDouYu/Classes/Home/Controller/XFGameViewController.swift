@@ -18,7 +18,7 @@ private let kGameViewH: CGFloat = 90
 private let kGameCellID = "kGameCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
-class XFGameViewController: UIViewController {
+class XFGameViewController: XFBaseViewController {
     
     // MARK:- 懒加载
     fileprivate lazy var gameVM: XFGameViewModel = XFGameViewModel()
@@ -72,7 +72,9 @@ class XFGameViewController: UIViewController {
 
 // MARK:- 设置 UI
 extension XFGameViewController {
-    fileprivate func setUpUI() {
+    override func setUpUI() {
+        
+        contentView = collectionView
         
         view.addSubview(collectionView)
         
@@ -81,6 +83,8 @@ extension XFGameViewController {
         collectionView.addSubview(gameView)
         
         collectionView.contentInset = UIEdgeInsets(top: kHeaderViewH + kGameViewH, left: 0, bottom: 0, right: 0)
+        
+        super.setUpUI()
     }
 }
 

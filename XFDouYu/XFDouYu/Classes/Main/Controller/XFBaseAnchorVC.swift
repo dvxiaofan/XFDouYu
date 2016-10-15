@@ -20,7 +20,7 @@ let kNormalItemW: CGFloat = (kScreenW - 3 * kItemMargin) / 2
 let kNormalItemH: CGFloat = kNormalItemW * 3 / 4
 let kPrettyItemH: CGFloat = kNormalItemW * 4 / 3
 
-class XFBaseAnchorVC: UIViewController {
+class XFBaseAnchorVC: XFBaseViewController {
     
     // MARK:- 定义属性
     var baseVM: XFBaseViewModel!
@@ -60,8 +60,13 @@ class XFBaseAnchorVC: UIViewController {
 
 // MARK:- 设置 UI
 extension XFBaseAnchorVC {
-    func setUpUI() {
+    override func setUpUI() {
+        
+        contentView = collectionView
+        
         view.addSubview(collectionView)
+        
+        super.setUpUI()
     }
 }
 

@@ -59,6 +59,7 @@
 		BDEF13851D965B0200F4DC8E /* XFAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13841D965B0200F4DC8E /* XFAnchorModel.swift */; };
 		BDEF13871D965B4700F4DC8E /* XFCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */; };
 		BDEF13891D9666F600F4DC8E /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */; };
+		BDFF78151DB218E900B7C854 /* XFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF78141DB218E800B7C854 /* XFBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		BDEF13841D965B0200F4DC8E /* XFAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFAnchorModel.swift; sourceTree = "<group>"; };
 		BDEF13861D965B4700F4DC8E /* XFCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFCycleModel.swift; sourceTree = "<group>"; };
 		BDEF13881D9666F600F4DC8E /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		BDFF78141DB218E800B7C854 /* XFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFBaseViewController.swift; sourceTree = "<group>"; };
 		D727A2AEDEF7CECA588EE1E7 /* Pods_XFDouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XFDouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -275,6 +277,7 @@
 				BD0F88991D92CEEC002137C4 /* Main.storyboard */,
 				BD0F88BA1D92D6A6002137C4 /* XFMainViewController.swift */,
 				BD8913B21DAE32C700641530 /* XFBaseAnchorVC.swift */,
+				BDFF78141DB218E800B7C854 /* XFBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				BD717C821D95756B002984D0 /* XFRecommendViewController.swift in Sources */,
 				BD0E5A151DAB1D0300D1CF53 /* XFGameViewModel.swift in Sources */,
 				BD0E5A131DAB1B5200D1CF53 /* XFGameViewController.swift in Sources */,
+				BDFF78151DB218E900B7C854 /* XFBaseViewController.swift in Sources */,
 				BDEF137F1D964EE900F4DC8E /* XFNetworkTool.swift in Sources */,
 				BD8913B31DAE32C700641530 /* XFBaseAnchorVC.swift in Sources */,
 				BD0620DD1D9426D20046AAD7 /* UIColor-Extension.swift in Sources */,
